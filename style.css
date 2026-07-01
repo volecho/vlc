@@ -110,6 +110,25 @@ section{padding:80px 6vw;position:relative;}
 .post-updated{font-family:'Space Mono',monospace;font-size:11px;color:var(--concrete);margin-top:40px;border-top:1px solid rgba(16,13,12,.15);padding-top:20px;}
 .back-link{display:inline-block;margin-bottom:30px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--signal);}
 
+.tag-pill-row{display:flex;flex-wrap:wrap;gap:7px;}
+.tag-pill{
+  font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+  text-decoration:none;color:var(--ink);background:transparent;border:1px solid rgba(16,13,12,.3);
+  padding:4px 10px;border-radius:999px;transition:.15s;white-space:nowrap;
+}
+.tag-pill:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.ticket .tag-pill-row{margin-top:2px;}
+.ticket .tag-pill{font-size:9px;padding:3px 8px;border-color:rgba(16,13,12,.25);}
+.back .tag-pill{border-color:rgba(237,230,214,.4);color:var(--paper);}
+.back .tag-pill:hover{background:var(--paper);color:var(--ink);}
+.post .tag-pill-row{margin:28px 0 0;}
+.tag-cloud{padding:60px 6vw 90px;}
+.tag-cloud .tag-pill{font-size:12px;padding:9px 18px;border-width:1.5px;}
+.tag-page-head{padding:70px 6vw 20px;}
+.tag-page-head .eyebrow{font-family:'Space Mono',monospace;letter-spacing:.3em;font-size:11px;color:var(--signal);margin-bottom:10px;}
+.tag-page-head h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,8vw,80px);margin:0 0 8px;line-height:.95;}
+.tag-page-head p{color:var(--concrete);font-size:14px;}
+
 @media(max-width:780px){
   .issue-spot{grid-template-columns:1fr;}
   .issue-spot .left{border-right:none;border-bottom:1px dashed rgba(237,230,214,.3);}
