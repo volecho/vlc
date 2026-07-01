@@ -110,20 +110,35 @@ section{padding:80px 6vw;position:relative;}
 .post-updated{font-family:'Space Mono',monospace;font-size:11px;color:var(--concrete);margin-top:40px;border-top:1px solid rgba(16,13,12,.15);padding-top:20px;}
 .back-link{display:inline-block;margin-bottom:30px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--signal);}
 
-.tag-pill-row{display:flex;flex-wrap:wrap;gap:7px;}
+/* ---------- Tag pills — beautified, and safe: on cards they're
+   plain <span> badges (never nested inside the card's own link),
+   everywhere else they're real <a> archive links. ---------- */
+.tag-pill-row{display:flex;flex-wrap:wrap;gap:9px;}
 .tag-pill{
-  font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;
-  text-decoration:none;color:var(--ink);background:transparent;border:1px solid rgba(16,13,12,.3);
-  padding:4px 10px;border-radius:999px;transition:.15s;white-space:nowrap;
+  display:inline-flex;align-items:center;
+  font-family:'Space Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  text-decoration:none;color:var(--brass-dim);background:rgba(201,162,75,.10);
+  border:1px solid rgba(201,162,75,.55);cursor:default;
+  padding:6px 13px;border-radius:999px;
+  transition:background .15s ease,color .15s ease,border-color .15s ease,transform .12s ease,box-shadow .12s ease;
+  white-space:nowrap;
 }
-.tag-pill:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);}
-.ticket .tag-pill-row{margin-top:2px;}
-.ticket .tag-pill{font-size:9px;padding:3px 8px;border-color:rgba(16,13,12,.25);}
-.back .tag-pill{border-color:rgba(237,230,214,.4);color:var(--paper);}
-.back .tag-pill:hover{background:var(--paper);color:var(--ink);}
-.post .tag-pill-row{margin:28px 0 0;}
-.tag-cloud{padding:60px 6vw 90px;}
-.tag-cloud .tag-pill{font-size:12px;padding:9px 18px;border-width:1.5px;}
+.tag-pill::before{content:"#";margin-right:3px;opacity:.6;}
+.tag-pill .count{opacity:.55;font-weight:400;margin-left:6px;}
+a.tag-pill{cursor:pointer;}
+a.tag-pill:hover{background:var(--ink);color:var(--brass);border-color:var(--ink);transform:translateY(-1px);box-shadow:2px 2px 0 rgba(16,13,12,.18);}
+
+.ticket .tag-pill-row{margin-top:12px;gap:6px;}
+.ticket .tag-pill{font-size:9px;padding:4px 9px;border-color:rgba(16,13,12,.22);background:rgba(16,13,12,.04);color:var(--concrete);}
+.ticket .back .tag-pill{border-color:rgba(237,230,214,.45);color:var(--paper);background:rgba(237,230,214,.08);}
+
+.post .tag-pill-row{margin:32px 0 0;gap:10px;}
+.post .tag-pill{font-size:12px;padding:7px 15px;}
+
+.tag-cloud{padding:70px 6vw 100px;}
+.tag-cloud .tag-pill-row{gap:12px;}
+.tag-cloud .tag-pill{font-size:13px;padding:11px 19px;border-width:1.5px;background:var(--paper);box-shadow:3px 3px 0 rgba(16,13,12,.10);}
+.tag-cloud a.tag-pill:hover{box-shadow:4px 4px 0 var(--ink);transform:translate(-2px,-2px);}
 .tag-page-head{padding:70px 6vw 20px;}
 .tag-page-head .eyebrow{font-family:'Space Mono',monospace;letter-spacing:.3em;font-size:11px;color:var(--signal);margin-bottom:10px;}
 .tag-page-head h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,8vw,80px);margin:0 0 8px;line-height:.95;}
