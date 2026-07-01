@@ -75,7 +75,7 @@ section{padding:80px 6vw;position:relative;}
 .ticket .title{font-family:'Bebas Neue',sans-serif;font-size:23px;line-height:1.08;letter-spacing:.01em;}
 .ticket .flip-hint{margin-top:auto;font-family:'Space Mono',monospace;font-size:10px;color:var(--concrete);letter-spacing:.1em;}
 .back .quote{font-style:italic;font-size:16px;line-height:1.5;}
-.back .read{margin-top:18px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;text-decoration:underline;}
+.back .read{margin-top:18px;font-family:'Space Mono',monospace;font-size:11px;text-decoration:underline;}
 
 .manifesto{background:var(--ink);color:var(--paper);}
 .manifesto .frame{border:2px solid var(--brass);padding:56px;display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;}
