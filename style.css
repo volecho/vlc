@@ -51,7 +51,8 @@ section{padding:80px 6vw;position:relative;}
 .issue-spot .left h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(30px,5vw,50px);margin:14px 0 10px;line-height:1;}
 .issue-spot .left p{color:#cfc6b3;font-size:15px;line-height:1.6;max-width:38ch;}
 .issue-spot .right{padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-.feat-mini{border:1px solid rgba(237,230,214,.25);padding:16px;font-family:'Space Mono',monospace;}
+.feat-mini{border:1px solid rgba(237,230,214,.25);padding:16px;font-family:'Space Mono',monospace;display:block;text-decoration:none;color:inherit;transition:border-color .15s,background .15s,transform .1s;}
+.feat-mini:hover{border-color:var(--brass);background:rgba(201,162,75,.08);transform:translateY(-2px);}
 .feat-mini .n{color:var(--brass);font-size:11px;}
 .feat-mini .t{font-family:'Fraunces',serif;font-size:15px;margin-top:6px;line-height:1.3;}
 
