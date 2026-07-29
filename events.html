@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events — Indiefferential</title>
+<meta name="description" content="Underground shows, warehouse parties and club nights — the Indiefferential events calendar.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230a0a0a%22/><text x=%2250%25%22 y=%2262%22 font-size=%2260%22 fill=%22%23d6ff3f%22 text-anchor=%22middle%22 font-family=%22Arial%22>i</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-root="">
+
+<div class="grain"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<div class="scroll-progress"></div>
+
+<div class="loader">
+  <div class="vinyl"></div>
+  <div class="loader-label">Loading Events</div>
+</div>
+
+<header class="site-header" data-include="header.html"></header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow" data-reveal="fade">Don't Miss</div>
+      <h1 class="page-hero-title" data-reveal>Events</h1>
+      <p class="page-hero-desc" data-reveal>Warehouse parties, basement shows and everything in between — curated, not sponsored.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="filter-bar" data-target=".events-list">
+      <button class="filter-chip is-active" data-filter="all">All Cities</button>
+      <button class="filter-chip" data-filter="berlin">Berlin</button>
+      <button class="filter-chip" data-filter="london">London</button>
+      <button class="filter-chip" data-filter="new-york">New York</button>
+      <button class="filter-chip" data-filter="tokyo">Tokyo</button>
+    </div>
+  </div>
+
+  <section class="section-tight">
+    <div class="container events-list">
+
+      <div class="event-row" data-reveal data-cat="berlin">
+        <div class="event-date"><div class="d">02</div><div class="m">Aug</div></div>
+        <div>
+          <div class="list-title" style="font-size:24px;">Night Circuit Warehouse Series</div>
+          <div class="event-city">Berlin, DE — Kraftwerk Bunker</div>
+        </div>
+        <span class="card-meta">Techno / Live</span>
+        <a href="#" class="btn magnetic" style="padding:10px 18px;">Tickets</a>
+      </div>
+
+      <div class="event-row" data-reveal data-delay="60" data-cat="london">
+        <div class="event-date"><div class="d">09</div><div class="m">Aug</div></div>
+        <div>
+          <div class="list-title" style="font-size:24px;">Concrete Sessions Vol. 3</div>
+          <div class="event-city">London, UK — The Yard</div>
+        </div>
+        <span class="card-meta">Hip-Hop</span>
+        <a href="#" class="btn magnetic" style="padding:10px 18px;">Tickets</a>
+      </div>
+
+      <div class="event-row" data-reveal data-delay="120" data-cat="new-york">
+        <div class="event-date"><div class="d">17</div><div class="m">Aug</div></div>
+        <div>
+          <div class="list-title" style="font-size:24px;">Marble Skin — Album Release Show</div>
+          <div class="event-city">New York, US — Basement East</div>
+        </div>
+        <span class="card-meta">Alt / Indie</span>
+        <a href="#" class="btn magnetic" style="padding:10px 18px;">Tickets</a>
+      </div>
+
+      <div class="event-row" data-reveal data-delay="180" data-cat="berlin">
+        <div class="event-date"><div class="d">23</div><div class="m">Aug</div></div>
+        <div>
+          <div class="list-title" style="font-size:24px;">Static Bloom Listening Party</div>
+          <div class="event-city">Berlin, DE — Halcyon Drift HQ</div>
+        </div>
+        <span class="card-meta">Electronic</span>
+        <a href="#" class="btn magnetic" style="padding:10px 18px;">RSVP</a>
+      </div>
+
+      <div class="event-row" data-reveal data-delay="240" data-cat="tokyo">
+        <div class="event-date"><div class="d">30</div><div class="m">Aug</div></div>
+        <div>
+          <div class="list-title" style="font-size:24px;">Void Theory — All Night Set</div>
+          <div class="event-city">Tokyo, JP — Contact</div>
+        </div>
+        <span class="card-meta">Techno</span>
+        <a href="#" class="btn magnetic" style="padding:10px 18px;">Tickets</a>
+      </div>
+
+      <div class="event-row" data-reveal data-delay="300" data-cat="london">
+        <div class="event-date"><div class="d">06</div><div class="m">Sep</div></div>
+        <div>
+          <div class="list-title" style="font-size:24px;">Paper Wasp — Acoustic Basement Set</div>
+          <div class="event-city">London, UK — The Cellar Door</div>
+        </div>
+        <span class="card-meta">Alt / Indie</span>
+        <a href="#" class="btn magnetic" style="padding:10px 18px;">Tickets</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" data-include="footer.html"></footer>
+<div class="mini-player" data-include="player.html"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

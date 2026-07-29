@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artists — Indiefferential</title>
+<meta name="description" content="Directory of independent artists covered by Indiefferential — electronic, hip-hop, alternative and beyond.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230a0a0a%22/><text x=%2250%25%22 y=%2262%22 font-size=%2260%22 fill=%22%23d6ff3f%22 text-anchor=%22middle%22 font-family=%22Arial%22>i</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-root="">
+
+<div class="grain"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<div class="scroll-progress"></div>
+
+<div class="loader">
+  <div class="vinyl"></div>
+  <div class="loader-label">Loading Artists</div>
+</div>
+
+<header class="site-header" data-include="header.html"></header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow" data-reveal="fade">Directory</div>
+      <h1 class="page-hero-title" data-reveal>Artists</h1>
+      <p class="page-hero-desc" data-reveal>The independent artists we're covering, following and losing sleep over. Follow to build your own feed.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="filter-bar" data-target=".artist-grid">
+      <button class="filter-chip is-active" data-filter="all">All</button>
+      <button class="filter-chip" data-filter="electronic">Electronic</button>
+      <button class="filter-chip" data-filter="hip-hop">Hip-Hop</button>
+      <button class="filter-chip" data-filter="techno">Techno</button>
+      <button class="filter-chip" data-filter="alt">Alt / Indie</button>
+    </div>
+  </div>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="grid grid-4 artist-grid">
+
+        <div class="artist-card" data-reveal data-cat="electronic">
+          <img src="https://picsum.photos/seed/artist1/500/500" alt="Nova Static">
+          <button class="artist-follow" aria-label="Follow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+          <div class="card-body card-outside" style="padding-top:14px;">
+            <div class="card-meta"><span>Electronic</span></div>
+            <div class="card-title">Nova Static</div>
+          </div>
+        </div>
+
+        <div class="artist-card" data-reveal data-delay="60" data-cat="techno">
+          <img src="https://picsum.photos/seed/artist2/500/500" alt="DJ Kiraa">
+          <button class="artist-follow" aria-label="Follow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+          <div class="card-body card-outside" style="padding-top:14px;">
+            <div class="card-meta"><span>Techno</span></div>
+            <div class="card-title">DJ Kiraa</div>
+          </div>
+        </div>
+
+        <div class="artist-card" data-reveal data-delay="120" data-cat="hip-hop">
+          <img src="https://picsum.photos/seed/artist3/500/500" alt="Ghostlip">
+          <button class="artist-follow" aria-label="Follow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+          <div class="card-body card-outside" style="padding-top:14px;">
+            <div class="card-meta"><span>Hip-Hop</span></div>
+            <div class="card-title">Ghostlip</div>
+          </div>
+        </div>
+
+        <div class="artist-card" data-reveal data-delay="180" data-cat="alt">
+          <img src="https://picsum.photos/seed/artist4/500/500" alt="Marble Skin">
+          <button class="artist-follow" aria-label="Follow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+          <div class="card-body card-outside" style="padding-top:14px;">
+            <div class="card-meta"><span>Alt / Indie</span></div>
+            <div class="card-title">Marble Skin</div>
+          </div>
+        </div>
+
+        <div class="artist-card" data-reveal data-cat="electronic">
+          <img src="https://picsum.photos/seed/artist5/500/500" alt="Halcyon Drift">
+          <button class="artist-follow" aria-label="Follow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+          <div class="card-body card-outside" style="padding-top:14px;">
+            <div class="card-meta"><span>Electronic</span></div>
+            <div class="card-title">Halcyon Drift</div>
+          </div>
+        </div>
+
+        <div class="artist-card" data-reveal data-delay="60" data-cat="hip-hop">
+          <img src="https://picsum.photos/seed/artist6/500/500" alt="Cast Iron">
+          <button class="artist-follow" aria-label="Follow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+          <div class="card-body card-outside" style="padding-top:14px;">
+            <div class="card-meta"><span>Hip-Hop</span></div>
+            <div class="card-title">Cast Iron</div>
+          </div>
+        </div>
+
+        <div class="artist-card" data-reveal data-delay="120" data-cat="techno">
+          <img src="https://picsum.photos/seed/artist7/500/500" alt="Void Theory">
+          <button class="artist-follow" aria-label="Follow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+          <div class="card-body card-outside" style="padding-top:14px;">
+            <div class="card-meta"><span>Techno</span></div>
+            <div class="card-title">Void Theory</div>
+          </div>
+        </div>
+
+        <div class="artist-card" data-reveal data-delay="180" data-cat="alt">
+          <img src="https://picsum.photos/seed/artist8/500/500" alt="Paper Wasp">
+          <button class="artist-follow" aria-label="Follow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+          <div class="card-body card-outside" style="padding-top:14px;">
+            <div class="card-meta"><span>Alt / Indie</span></div>
+            <div class="card-title">Paper Wasp</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" data-include="footer.html"></footer>
+<div class="mini-player" data-include="player.html"></div>
+<script src="js/main.js"></script>
+</body>
+</html>
