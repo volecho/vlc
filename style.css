@@ -532,7 +532,7 @@ img{display:block;max-width:100%}
   font-size:15px;
   line-height:1.5;
 }
-.pagination{display:flex;gap:7px;margin-top:30px;padding-top:25px;border-top:1px solid var(--rs-black)}
+.pagination{display:flex;gap:7px;margin-top:30px;padding-top:25px;border-top:1px solid var(--rs-black);flex-wrap:wrap}
 .pagination .btn{
   display:flex;
   width:34px;
@@ -544,6 +544,10 @@ img{display:block;max-width:100%}
   font-size:11px;
 }
 .pagination .btn:hover,.pagination [aria-current="page"]{color:#fff;background:var(--rs-black);border-color:var(--rs-black)}
+.pagination .pagination__nav{width:auto;padding:0 16px;white-space:nowrap}
+.pagination .pagination__gap{border-color:transparent;cursor:default}
+.pagination .pagination__gap:hover{background:transparent;color:#111;border-color:transparent}
+.pagination .is-disabled{opacity:.35;pointer-events:none}
 
 .sidebar{min-width:0;border-left:1px solid var(--rs-rule);padding-left:28px}
 .sidebar__item{padding-bottom:34px;margin-bottom:34px;border-bottom:1px solid var(--rs-rule)}
