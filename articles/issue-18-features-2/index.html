@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Issue #18 Features — Volecho</title>
+<meta name="description" content="Volecho — Independent music, culture and art coverage from artists and scenes worth hearing.">
+<link rel="icon" href="../../favicon.ico">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="header" id="js-header">
+  <div class="header__inner">
+    <div class="logo logo--wordmark">
+      <a class="logo__link" href="../../index.html">
+        <span class="logo__wordmark">VOLECHO</span>
+        <span class="logo__strap">Music · Culture · Art</span>
+      </a>
+    </div>
+    <nav class="navbar">
+      <button class="navbar__toggle" type="button" aria-label="Menu" aria-haspopup="true" aria-expanded="false">
+        <span class="navbar__toggle-box"><span class="navbar__toggle-inner">Menu</span></span>
+      </button>
+      <ul class="navbar__menu">
+        <li><a href="../../index.html">Home</a></li><li><a href="../../index.html#latest">Latest</a></li><li><a href="../../index.html#latest">Reviews</a></li><li><a href="../../index.html#latest">Interviews</a></li><li><a href="../../index.html#about">About</a></li>
+      </ul>
+    </nav>
+    <div class="buttons">
+      <a href="mailto:volechomag@gmail.com?subject=Volecho%20newsletter" class="btn btn--small btn--outline">Subscribe</a>
+    </div>
+  </div>
+  <div class="rs-trending">
+    <div class="wrapper">
+      <span class="rs-trending-label">Trending</span>
+      <a href="../../index.html#latest">New music</a>
+      <a href="../../index.html#latest">Culture</a>
+      <a href="../../index.html#latest">Reviews</a>
+      <a href="../../index.html#latest">Artists to watch</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <article class="article-page">
+    <a class="article-back" href="../../index.html">← Back to Volecho</a>
+    <div class="post-meta">Issue · Volecho.com · June 30, 2026</div>
+    <h1>Issue #18 Features</h1>
+    
+    <div class="article-body">This is a placeholder for the Issue #18 Features article. Replace this text with the real write-up — the layout, image, and front-page card are already wired up to match the rest of the site.</div>
+    
+  </article>
+</main>
+<footer class="footer">
+  <div class="wrapper">
+    <a class="logo footer__logo" href="../../index.html">
+      <span class="logo__wordmark">VOLECHO</span>
+      <span class="logo__strap">Music · Culture · Art</span>
+    </a>
+    <div class="footer__copy"><p>© Volecho 2026 — Independent music and culture magazine</p></div>
+  </div>
+</footer>
+<script>
+var menuToggle = document.querySelector('.navbar__toggle');
+var navbar = document.querySelector('.navbar');
+if(menuToggle && navbar){
+  menuToggle.addEventListener('click', function(){
+    var isOpen = navbar.classList.toggle('is-open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+}
+document.querySelectorAll('img[loading]').forEach(function(img){
+  if(img.complete) img.classList.add('is-loaded');
+  else img.addEventListener('load', function(){ this.classList.add('is-loaded'); });
+});
+</script>
+</body>
+</html>
