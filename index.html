@@ -3,477 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Indiefferential — Underground Music &amp; Culture Magazine</title>
-<meta name="description" content="Indiefferential is an independent magazine covering underground music, electronic, hip-hop, fashion, photography and nightlife culture.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230a0a0a%22/><text x=%2250%25%22 y=%2262%22 font-size=%2260%22 fill=%22%23d6ff3f%22 text-anchor=%22middle%22 font-family=%22Arial%22>i</text></svg>">
-<link rel="stylesheet" href="css/style.css">
-
-<meta property="og:title" content="Indiefferential — Underground Music & Culture Magazine">
-<meta property="og:description" content="Independent voice for underground music, fashion, photography and nightlife.">
-<meta property="og:type" content="website">
+<title>Indiefferential — Music, Culture, Art &amp; More</title>
+<meta name="description" content="Indiefferential — A magazine created by artists featuring new music, games, books and art projects worldwide.">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="style.css">
 </head>
-<body data-root="">
-
-<div class="grain"></div>
-<div class="cursor-dot"></div>
-<div class="cursor-ring"></div>
-<div class="scroll-progress"></div>
-
-<div class="loader">
-  <div class="vinyl"></div>
-  <div class="loader-label">Loading Issue No. 47</div>
-</div>
-
-<header class="site-header" data-include="header.html"></header>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="https://indiefferential.com/">
+      <img src="https://indiefferential.com/media/website/indiefferential.svg" alt="Indiefferential">
+    </a>
+    <button class="mobile-menu-button" type="button" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="https://indiefferential.com/tags/introducing/">Features</a>
+      <a href="https://indiefferential.com/tags/interviews/">Interviews</a>
+      <a href="https://indiefferential.com/about-us/">About</a>
+      <a href="https://indiefferential.com/podcasts/">Podcasts</a>
+      <div class="nav-dropdown">
+        <a href="https://indiefferential.com/tags/events/">Events</a>
+        <div class="nav-dropdown-menu">
+          <a href="https://indiefferential.com/tags/events/">Events</a>
+          <a href="https://indiefferential.com/tags/events/">Concert Reviews</a>
+        </div>
+      </div>
+      <a href="https://indiefferential.com/radio/">Radio</a>
+      <a href="https://indiefferential.com/contact-us/">Contact</a>
+      <a href="https://indiefferential.com/magazine/">Magazine</a>
+      <a href="https://indiefferential.com/spotlight/">Spotlight</a>
+      <a href="https://indiefferential.com/charts/">Charts</a>
+      <a href="https://indiefferential.com/lumiere/">LUMIÈRE</a>
+      <a class="subscribe" href="https://buymeacoffee.com/indiefferential" target="_blank" rel="noopener">Subscribe</a>
+    </nav>
+  </div>
+</header>
 
 <main>
-
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div class="hero-media">
-      <img src="https://picsum.photos/id/1062/1800/1100" alt="Underground club scene" id="heroImg">
+  <section class="news-section">
+    <div class="container">
+      <h1 class="section-title">News</h1>
+      <div class="news-grid"><article class="news-card center">
+  <a href="articles/mark-cee-finds-beauty-in-loss-and-memory-with-new-single-how-you-left-me-still/">
+    <img class="news-card-image" src="https://volecho.com/media/posts/159/volecho-music-magazine-82.jpg" alt="Mark Cee Finds Beauty in Loss and Memory With New Single "How You Left Me Still"">
+    <div class="news-card-content">
+      <span class="news-label">Feature</span>
+      <h2 class="news-card-title">Mark Cee Finds Beauty in Loss and Memory With New Single "How You Left Me Still"</h2>
+      <div class="news-author">By Volecho.com</div>
     </div>
-    <div class="hero-noise-grad"></div>
-
-    <div class="hero-index">
-      <button class="is-active" data-img="https://picsum.photos/id/1062/1800/1100">01</button>
-      <button data-img="https://picsum.photos/seed/rave2/1800/1100">02</button>
-      <button data-img="https://picsum.photos/seed/rave3/1800/1100">03</button>
+  </a>
+</article>
+<article class="news-card left-top">
+  <a href="articles/issue-18-features-2/">
+    <div class="news-card-image" aria-hidden="true"></div>
+    <div class="news-card-content">
+      <span class="news-label">Issue</span>
+      <h2 class="news-card-title">Issue #18 Features</h2>
+      <div class="news-author">By Volecho.com</div>
     </div>
-
-    <div class="hero-content container">
-      <div class="hero-eyebrow eyebrow" data-reveal="fade">Issue No. 47 — Night Circuit</div>
-      <h1 class="hero-title">
-        <span class="line"><span>SOUND FROM</span></span>
-        <span class="line"><span class="outline">THE UNDER</span></span>
-        <span class="line"><span class="accent">GROUND.</span></span>
-      </h1>
-      <p class="hero-sub" data-reveal>The scenes, sounds and faces shaping independent culture right now — reported from the floor, not the press release.</p>
-      <div class="hero-actions" data-reveal>
-        <a href="archive.html" class="btn btn-solid magnetic">Read Latest Issue</a>
-        <a href="#featured" class="btn magnetic">Explore Stories</a>
-        <span class="hero-meta">04 / 03:12</span>
-      </div>
+  </a>
+</article>
+<article class="news-card left-bottom">
+  <a href="articles/sdasdasd/">
+    <div class="news-card-image" aria-hidden="true"></div>
+    <div class="news-card-content">
+      <span class="news-label">Feature</span>
+      <h2 class="news-card-title">Heavy</h2>
+      <div class="news-author">By Volecho.com</div>
     </div>
-
-    <div class="scroll-indicator">
-      <span>SCROLL</span>
-      <span class="line"></span>
+  </a>
+</article></div>
     </div>
   </section>
-
-  <!-- ============ MARQUEE ============ -->
-  <div class="marquee">
-    <div class="marquee-track">
-      <span>NEW RELEASE <em>·</em> NOVA STATIC — MIDNIGHT FREQUENCIES <em>·</em> INTERVIEW <em>·</em> DJ KIRAA ON RAVE CULTURE <em>·</em> FASHION WEEK <em>·</em> BERLIN STREET STYLE <em>·</em> LISTEN NOW <em>·</em></span>
-      <span>NEW RELEASE <em>·</em> NOVA STATIC — MIDNIGHT FREQUENCIES <em>·</em> INTERVIEW <em>·</em> DJ KIRAA ON RAVE CULTURE <em>·</em> FASHION WEEK <em>·</em> BERLIN STREET STYLE <em>·</em> LISTEN NOW <em>·</em></span>
+  <div class="container">
+    <div class="content-layout">
+      <section class="latest-section">
+        <h2 class="latest-title">Latest Posts</h2>
+        <article class="latest-post">
+  <a href="articles/mark-cee-finds-beauty-in-loss-and-memory-with-new-single-how-you-left-me-still/"><img class="latest-post-image" src="https://volecho.com/media/posts/159/volecho-music-magazine-82.jpg" alt="Mark Cee Finds Beauty in Loss and Memory With New Single "How You Left Me Still""></a>
+  <div>
+    <div class="post-meta">Volecho.com · June 30, 2026</div>
+    <h3 class="latest-post-title"><a href="articles/mark-cee-finds-beauty-in-loss-and-memory-with-new-single-how-you-left-me-still/">Mark Cee Finds Beauty in Loss and Memory With New Single "How You Left Me Still"</a></h3>
+    <p class="latest-post-excerpt">A song born from necessity, not entertainment — built around the people whose absence never quite leaves.</p>
+    <a class="read-more" href="articles/mark-cee-finds-beauty-in-loss-and-memory-with-new-single-how-you-left-me-still/">Read More →</a>
+  </div>
+</article>
+<article class="latest-post">
+  <a href="articles/issue-18-features-2/"><div class="latest-post-image" aria-hidden="true"></div></a>
+  <div>
+    <div class="post-meta">Volecho.com · June 30, 2026</div>
+    <h3 class="latest-post-title"><a href="articles/issue-18-features-2/">Issue #18 Features</a></h3>
+    <p class="latest-post-excerpt">Eleven new dispatches from the underground — the full lineup behind our latest print run.</p>
+    <a class="read-more" href="articles/issue-18-features-2/">Read More →</a>
+  </div>
+</article>
+<article class="latest-post">
+  <a href="articles/sdasdasd/"><div class="latest-post-image" aria-hidden="true"></div></a>
+  <div>
+    <div class="post-meta">Volecho.com · June 30, 2026</div>
+    <h3 class="latest-post-title"><a href="articles/sdasdasd/">Heavy</a></h3>
+    <p class="latest-post-excerpt">HEavy</p>
+    <a class="read-more" href="articles/sdasdasd/">Read More →</a>
+  </div>
+</article>
+      </section>
+      <aside class="sidebar">
+  <section class="sidebar-section">
+    <h2 class="sidebar-title">Featured Stories</h2>
+    <a class="featured-story" href="articles/mark-cee-finds-beauty-in-loss-and-memory-with-new-single-how-you-left-me-still/"><h3 class="featured-story-title">Mark Cee Finds Beauty in Loss and Memory With New Single "How You Left Me Still"</h3><div class="featured-story-date">June 30, 2026</div></a><a class="featured-story" href="articles/issue-18-features-2/"><h3 class="featured-story-title">Issue #18 Features</h3><div class="featured-story-date">June 30, 2026</div></a><a class="featured-story" href="articles/sdasdasd/"><h3 class="featured-story-title">Heavy</h3><div class="featured-story-date">June 30, 2026</div></a>
+  </section>
+  <section class="sidebar-section">
+    <h2 class="sidebar-title">Latest Reviews</h2>
+    <p style="color:#777;font-size:13px;">No reviews available.</p>
+  </section>
+  <section class="sidebar-section">
+    <h2 class="sidebar-title">Categories</h2>
+    <ul class="category-list"><li><a href="https://indiefferential.com/categories/feature/">Feature</a><span class="count">(2)</span></li><li><a href="https://indiefferential.com/categories/issue/">Issue</a><span class="count">(1)</span></li></ul>
+  </section>
+  <section class="sidebar-section">
+    <h2 class="sidebar-title">Authors</h2>
+    <ul class="author-list"><li><a href="https://indiefferential.com/author/volecho-com/">Volecho.com</a><span class="count">3 Posts</span></li></ul>
+  </section>
+</aside>
     </div>
   </div>
-
-  <!-- ============ FEATURED STORIES ============ -->
-  <section class="section" id="featured">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <div>
-          <div class="eyebrow">Editor's Selection</div>
-          <h2 class="section-title">Featured<br>Stories</h2>
-        </div>
-        <a href="features.html" class="section-link magnetic">View All Features →</a>
-      </div>
-
-      <div class="feature-grid">
-        <a href="article.html" class="card" data-reveal="scale">
-          <div class="card-media">
-            <img src="https://picsum.photos/id/1074/900/1000" alt="">
-            <span class="card-tag">Cover Story</span>
-          </div>
-          <div class="card-body">
-            <div class="card-meta"><span>Culture</span><span>·</span><span>12 min read</span></div>
-            <div class="card-title" style="font-size:26px;">Inside Berlin's Last Analog Rave: A Night at Kraftwerk Bunker</div>
-          </div>
-        </a>
-        <a href="article.html" class="card" data-reveal="scale" data-delay="100">
-          <div class="card-media">
-            <img src="https://picsum.photos/id/1082/700/800" alt="">
-            <span class="card-tag">Interview</span>
-          </div>
-          <div class="card-body">
-            <div class="card-meta"><span>Music</span><span>·</span><span>8 min</span></div>
-            <div class="card-title">Nova Static Doesn't Care If You Dance</div>
-          </div>
-        </a>
-        <a href="article.html" class="card" data-reveal="scale" data-delay="150">
-          <div class="card-media">
-            <img src="https://picsum.photos/id/1080/700/800" alt="">
-            <span class="card-tag">Fashion</span>
-          </div>
-          <div class="card-body">
-            <div class="card-meta"><span>Style</span><span>·</span><span>6 min</span></div>
-            <div class="card-title">Concrete Couture: Streetwear After Dark</div>
-          </div>
-        </a>
-        <a href="article.html" class="card" data-reveal="scale" data-delay="200">
-          <div class="card-media">
-            <img src="https://picsum.photos/id/1069/900/700" alt="">
-            <span class="card-tag">Photography</span>
-          </div>
-          <div class="card-body">
-            <div class="card-meta"><span>Visuals</span><span>·</span><span>4 min</span></div>
-            <div class="card-title" style="font-size:24px;">Flashbulb Memories: A Decade Shooting Warehouse Parties</div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ TRENDING ARTISTS ============ -->
-  <section class="section" style="background:var(--bg-raised); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <div>
-          <div class="eyebrow">On Rotation</div>
-          <h2 class="section-title">Trending<br>Artists</h2>
-        </div>
-        <a href="artists.html" class="section-link magnetic">All Artists →</a>
-      </div>
-
-      <div class="grid grid-4">
-        <div class="artist-card" data-reveal>
-          <img src="https://picsum.photos/seed/artist1/500/500" alt="Nova Static">
-          <button class="artist-follow" aria-label="Follow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
-          <div class="card-body card-outside" style="padding-top:14px;">
-            <div class="card-meta"><span>Electronic</span></div>
-            <div class="card-title">Nova Static</div>
-          </div>
-        </div>
-        <div class="artist-card" data-reveal data-delay="80">
-          <img src="https://picsum.photos/seed/artist2/500/500" alt="Kiraa">
-          <button class="artist-follow" aria-label="Follow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
-          <div class="card-body card-outside" style="padding-top:14px;">
-            <div class="card-meta"><span>Techno</span></div>
-            <div class="card-title">DJ Kiraa</div>
-          </div>
-        </div>
-        <div class="artist-card" data-reveal data-delay="160">
-          <img src="https://picsum.photos/seed/artist3/500/500" alt="Ghostlip">
-          <button class="artist-follow" aria-label="Follow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
-          <div class="card-body card-outside" style="padding-top:14px;">
-            <div class="card-meta"><span>Hip-Hop</span></div>
-            <div class="card-title">Ghostlip</div>
-          </div>
-        </div>
-        <div class="artist-card" data-reveal data-delay="240">
-          <img src="https://picsum.photos/seed/artist4/500/500" alt="Marble Skin">
-          <button class="artist-follow" aria-label="Follow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
-          <div class="card-body card-outside" style="padding-top:14px;">
-            <div class="card-meta"><span>Alt / Indie</span></div>
-            <div class="card-title">Marble Skin</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ MUSIC REVIEWS ============ -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <div>
-          <div class="eyebrow">Just In</div>
-          <h2 class="section-title">Music<br>Reviews</h2>
-        </div>
-        <a href="reviews.html" class="section-link magnetic">All Reviews →</a>
-      </div>
-
-      <div>
-        <div class="list-row" data-reveal>
-          <span class="list-num">9.1</span>
-          <div>
-            <div class="list-cat">Album · Electronic</div>
-            <div class="list-title">Midnight Frequencies — Nova Static</div>
-          </div>
-          <span class="list-cat" style="color:var(--fg-dim);">Aug 02</span>
-          <span class="list-arrow">→</span>
-        </div>
-        <div class="list-row" data-reveal data-delay="60">
-          <span class="list-num">8.6</span>
-          <div>
-            <div class="list-cat">EP · Hip-Hop</div>
-            <div class="list-title">Concrete Halo — Ghostlip</div>
-          </div>
-          <span class="list-cat" style="color:var(--fg-dim);">Jul 28</span>
-          <span class="list-arrow">→</span>
-        </div>
-        <div class="list-row" data-reveal data-delay="120">
-          <span class="list-num">7.9</span>
-          <div>
-            <div class="list-cat">Single · Techno</div>
-            <div class="list-title">Vantablack — DJ Kiraa</div>
-          </div>
-          <span class="list-cat" style="color:var(--fg-dim);">Jul 21</span>
-          <span class="list-arrow">→</span>
-        </div>
-        <div class="list-row" data-reveal data-delay="180">
-          <span class="list-num">8.2</span>
-          <div>
-            <div class="list-cat">Album · Alt / Indie</div>
-            <div class="list-title">Skin Deep — Marble Skin</div>
-          </div>
-          <span class="list-cat" style="color:var(--fg-dim);">Jul 14</span>
-          <span class="list-arrow">→</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ NEW RELEASES / AUDIO EXPERIENCE ============ -->
-  <section class="section section-tight" style="background:var(--bg-raised); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <div>
-          <div class="eyebrow">Listen</div>
-          <h2 class="section-title">New<br>Releases</h2>
-        </div>
-        <a href="playlists.html" class="section-link magnetic">All Playlists →</a>
-      </div>
-
-      <div class="grid grid-4">
-        <div class="card" data-reveal data-play-track data-track-title="Midnight Frequencies" data-track-artist="Nova Static" data-track-art="https://picsum.photos/seed/rel1/300/300">
-          <div class="card-media" style="aspect-ratio:1;">
-            <img src="https://picsum.photos/seed/rel1/500/500" alt="">
-            <div class="card-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M7 4l14 8-14 8V4z"/></svg></div>
-          </div>
-          <div class="card-body card-outside">
-            <div class="card-meta"><span>Album</span></div>
-            <div class="card-title">Midnight Frequencies</div>
-          </div>
-        </div>
-        <div class="card" data-reveal data-delay="80" data-play-track data-track-title="Concrete Halo" data-track-artist="Ghostlip" data-track-art="https://picsum.photos/seed/rel2/300/300">
-          <div class="card-media" style="aspect-ratio:1;">
-            <img src="https://picsum.photos/seed/rel2/500/500" alt="">
-            <div class="card-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M7 4l14 8-14 8V4z"/></svg></div>
-          </div>
-          <div class="card-body card-outside">
-            <div class="card-meta"><span>EP</span></div>
-            <div class="card-title">Concrete Halo</div>
-          </div>
-        </div>
-        <div class="card" data-reveal data-delay="160" data-play-track data-track-title="Vantablack" data-track-artist="DJ Kiraa" data-track-art="https://picsum.photos/seed/rel3/300/300">
-          <div class="card-media" style="aspect-ratio:1;">
-            <img src="https://picsum.photos/seed/rel3/500/500" alt="">
-            <div class="card-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M7 4l14 8-14 8V4z"/></svg></div>
-          </div>
-          <div class="card-body card-outside">
-            <div class="card-meta"><span>Single</span></div>
-            <div class="card-title">Vantablack</div>
-          </div>
-        </div>
-        <div class="card" data-reveal data-delay="240" data-play-track data-track-title="Skin Deep" data-track-artist="Marble Skin" data-track-art="https://picsum.photos/seed/rel4/300/300">
-          <div class="card-media" style="aspect-ratio:1;">
-            <img src="https://picsum.photos/seed/rel4/500/500" alt="">
-            <div class="card-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M7 4l14 8-14 8V4z"/></svg></div>
-          </div>
-          <div class="card-body card-outside">
-            <div class="card-meta"><span>Album</span></div>
-            <div class="card-title">Skin Deep</div>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-top:36px;" data-reveal>
-        <div class="eyebrow" style="margin-bottom:16px;">Embedded Player</div>
-        <iframe class="embed-frame" style="border-radius:0;" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify playlist embed"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ LATEST INTERVIEWS ============ -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <div>
-          <div class="eyebrow">Conversations</div>
-          <h2 class="section-title">Latest<br>Interviews</h2>
-        </div>
-        <a href="interviews.html" class="section-link magnetic">All Interviews →</a>
-      </div>
-
-      <div class="grid grid-3">
-        <a href="article.html" class="card" data-reveal>
-          <div class="card-media">
-            <img src="https://picsum.photos/id/1084/700/900" alt="">
-            <span class="card-tag">Interview</span>
-          </div>
-          <div class="card-body">
-            <div class="card-meta"><span>Music</span><span>·</span><span>Jul 26</span></div>
-            <div class="card-title">Nova Static Doesn't Care If You Dance</div>
-          </div>
-        </a>
-        <a href="article.html" class="card" data-reveal data-delay="80">
-          <div class="card-media">
-            <img src="https://picsum.photos/id/1005/700/900" alt="">
-            <span class="card-tag">Interview</span>
-          </div>
-          <div class="card-body">
-            <div class="card-meta"><span>Culture</span><span>·</span><span>Jul 19</span></div>
-            <div class="card-title">Ghostlip on Grief, Bars, and Basement Shows</div>
-          </div>
-        </a>
-        <a href="article.html" class="card" data-reveal data-delay="160">
-          <div class="card-media">
-            <img src="https://picsum.photos/id/1027/700/900" alt="">
-            <span class="card-tag">Interview</span>
-          </div>
-          <div class="card-body">
-            <div class="card-meta"><span>Fashion</span><span>·</span><span>Jul 11</span></div>
-            <div class="card-title">The Stylist Behind Half Your Favorite Album Covers</div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ EVENTS CALENDAR ============ -->
-  <section class="section" style="background:var(--bg-raised); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <div>
-          <div class="eyebrow">Don't Miss</div>
-          <h2 class="section-title">Events<br>Calendar</h2>
-        </div>
-        <a href="events.html" class="section-link magnetic">Full Calendar →</a>
-      </div>
-
-      <div data-reveal>
-        <div class="event-row">
-          <div class="event-date"><div class="d">02</div><div class="m">Aug</div></div>
-          <div>
-            <div class="list-title" style="font-size:22px;">Night Circuit Warehouse Series</div>
-            <div class="event-city">Berlin, DE</div>
-          </div>
-          <span class="card-meta">Techno / Live</span>
-          <a href="events.html" class="btn magnetic" style="padding:10px 18px;">Tickets</a>
-        </div>
-        <div class="event-row">
-          <div class="event-date"><div class="d">09</div><div class="m">Aug</div></div>
-          <div>
-            <div class="list-title" style="font-size:22px;">Concrete Sessions Vol. 3</div>
-            <div class="event-city">London, UK</div>
-          </div>
-          <span class="card-meta">Hip-Hop</span>
-          <a href="events.html" class="btn magnetic" style="padding:10px 18px;">Tickets</a>
-        </div>
-        <div class="event-row">
-          <div class="event-date"><div class="d">17</div><div class="m">Aug</div></div>
-          <div>
-            <div class="list-title" style="font-size:22px;">Marble Skin — Album Release Show</div>
-            <div class="event-city">New York, US</div>
-          </div>
-          <span class="card-meta">Alt / Indie</span>
-          <a href="events.html" class="btn magnetic" style="padding:10px 18px;">Tickets</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ EDITORIAL PICKS + POPULAR CATEGORIES ============ -->
-  <section class="section">
-    <div class="container">
-      <div class="split" style="align-items:flex-start;">
-        <div>
-          <div class="eyebrow" data-reveal>Curated</div>
-          <h2 class="section-title" data-reveal>Editorial<br>Picks</h2>
-          <div style="margin-top:34px;">
-            <div class="list-row" style="grid-template-columns:40px 1fr;" data-reveal>
-              <span class="list-num">01</span>
-              <a href="article.html" class="list-title" style="font-size:20px;">The Rise of DIY Label Culture</a>
-            </div>
-            <div class="list-row" style="grid-template-columns:40px 1fr;" data-reveal data-delay="60">
-              <span class="list-num">02</span>
-              <a href="article.html" class="list-title" style="font-size:20px;">Why Vinyl Still Wins on the Dancefloor</a>
-            </div>
-            <div class="list-row" style="grid-template-columns:40px 1fr;" data-reveal data-delay="120">
-              <span class="list-num">03</span>
-              <a href="article.html" class="list-title" style="font-size:20px;">Nightlife After Curfew: Cities Fighting Back</a>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="eyebrow" data-reveal>Explore</div>
-          <h2 class="section-title" data-reveal>Popular<br>Categories</h2>
-          <div class="grid grid-2" style="margin-top:34px;">
-            <a href="culture.html" class="card" data-reveal>
-              <div class="card-media" style="aspect-ratio:16/11;">
-                <img src="https://picsum.photos/seed/cat1/500/350" alt="">
-              </div>
-              <div class="card-body card-outside"><div class="card-title">Culture</div></div>
-            </a>
-            <a href="fashion.html" class="card" data-reveal data-delay="60">
-              <div class="card-media" style="aspect-ratio:16/11;">
-                <img src="https://picsum.photos/seed/cat2/500/350" alt="">
-              </div>
-              <div class="card-body card-outside"><div class="card-title">Fashion</div></div>
-            </a>
-            <a href="photography.html" class="card" data-reveal data-delay="120">
-              <div class="card-media" style="aspect-ratio:16/11;">
-                <img src="https://picsum.photos/seed/cat3/500/350" alt="">
-              </div>
-              <div class="card-body card-outside"><div class="card-title">Photography</div></div>
-            </a>
-            <a href="videos.html" class="card" data-reveal data-delay="180">
-              <div class="card-media" style="aspect-ratio:16/11;">
-                <img src="https://picsum.photos/seed/cat4/500/350" alt="">
-              </div>
-              <div class="card-body card-outside"><div class="card-title">Videos</div></div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ NEWSLETTER ============ -->
-  <section class="newsletter section-tight">
-    <div class="newsletter-grad"></div>
-    <div class="container newsletter-inner">
-      <div>
-        <div class="eyebrow" data-reveal>Stay Under</div>
-        <h2 class="newsletter-title" data-reveal>Get the scene<br>before it breaks.</h2>
-      </div>
-      <form class="newsletter-form" data-reveal>
-        <input type="email" placeholder="your@email.com" required aria-label="Email address">
-        <button type="submit" class="magnetic">Subscribe →</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- ============ INSTAGRAM / SOCIAL GALLERY ============ -->
-  <section class="section-tight">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <div>
-          <div class="eyebrow">@indiefferential</div>
-          <h2 class="section-title" style="font-size:clamp(28px,4vw,46px);">Follow the Feed</h2>
-        </div>
-      </div>
-    </div>
-    <div class="social-grid" data-reveal>
-      <div class="cell" data-handle="24.1k"><img src="https://picsum.photos/seed/ig1/400/400" alt=""></div>
-      <div class="cell" data-handle="8.4k"><img src="https://picsum.photos/seed/ig2/400/400" alt=""></div>
-      <div class="cell" data-handle="12k"><img src="https://picsum.photos/seed/ig3/400/400" alt=""></div>
-      <div class="cell" data-handle="3.1k"><img src="https://picsum.photos/seed/ig4/400/400" alt=""></div>
-      <div class="cell" data-handle="19k"><img src="https://picsum.photos/seed/ig5/400/400" alt=""></div>
-      <div class="cell" data-handle="6.7k"><img src="https://picsum.photos/seed/ig6/400/400" alt=""></div>
-    </div>
-  </section>
-
 </main>
-
-<footer class="site-footer" data-include="footer.html"></footer>
-
-<div class="mini-player" data-include="player.html"></div>
-
-<script src="js/main.js"></script>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a class="footer-logo" href="https://indiefferential.com/"><img src="https://indiefferential.com/media/website/indiefferential.svg" alt="Indiefferential"></a>
+        <p class="footer-description">A magazine created by artists featuring new music, games, books and art projects worldwide.</p>
+      </div>
+      <div>
+        <h3 class="footer-heading">Explore</h3>
+        <div class="footer-links">
+          <a href="https://indiefferential.com/tags/introducing/">Features</a>
+          <a href="https://indiefferential.com/tags/interviews/">Interviews</a>
+          <a href="https://indiefferential.com/podcasts/">Podcasts</a>
+          <a href="https://indiefferential.com/tags/events/">Events</a>
+          <a href="https://indiefferential.com/radio/">Radio</a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer-heading">Indiefferential</h3>
+        <div class="footer-links">
+          <a href="https://indiefferential.com/about-us/">About</a>
+          <a href="https://indiefferential.com/contact-us/">Contact</a>
+          <a href="https://indiefferential.com/magazine/">Magazine</a>
+          <a href="https://indiefferential.com/spotlight/">Spotlight</a>
+          <a href="https://indiefferential.com/charts/">Charts</a>
+          <a href="https://indiefferential.com/lumiere/">LUMIÈRE</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Indiefferential</div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){
+  document.getElementById('mainNav').classList.toggle('open');
+}
+</script>
 </body>
 </html>
