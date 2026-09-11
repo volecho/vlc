@@ -201,6 +201,36 @@ img{display:block;max-width:100%}
    a heavy black rule, a bold serif quote, a small-caps byline, another rule.
    Sized to sit as a true equal-weight twin of the Radio block beside it. */
 .reviews-panel{display:flex;flex-direction:column;justify-content:center;min-height:280px}
+.reviews-panel--inline{margin:34px 0 40px;padding:30px 24px;border-top:4px solid #111;border-bottom:4px solid #111;min-height:0;background:#fafafa}
+.reviews-panel--inline .review-card__rule{display:none}
+.mag-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px;align-items:start}
+.mag-panel__cover{display:block;border:1px solid #ddd;background:#f4f4f4}
+.mag-panel__cover img{display:block;width:100%;height:auto}
+.mag-panel__actions{display:flex;flex-direction:column;gap:12px}
+.mag-btn{display:block;text-align:center;padding:13px 14px;font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;font-family:Georgia,"Times New Roman",serif;border:2px solid #111;color:#111;background:#fff;text-decoration:none}
+.mag-btn--solid{background:#111;color:#fff}
+.mag-btn:hover{background:#ed173d;border-color:#ed173d;color:#fff}
+.mag-panel__signup{margin-top:8px;border-top:1px solid #ddd;padding-top:16px}
+.mag-panel__signup-label{display:block;font-size:12px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.mag-panel__signup-form{display:flex;gap:8px}
+.mag-panel__signup-form input{flex:1;min-width:0;padding:10px;border:1px solid #bbb;font-size:13px}
+.mag-panel__signup-form button{padding:10px 14px;border:0;background:#111;color:#fff;font-weight:800;font-size:12px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.mag-panel__fineprint{margin:10px 0 0;font-size:11px;color:#666;line-height:1.5}
+@media(max-width:600px){.mag-panel{grid-template-columns:minmax(0,1fr)}}
+/* Magazine-style culture feature block placed in the feed under the printed
+   Special Edition posts. Pulls the most recent post tagged "culture". */
+.culture-feature{border:1px solid #111;background:#fff;padding:22px;margin:28px 0}
+.culture-feature__row{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:28px;align-items:center}
+.culture-feature__media{display:block;background:#f4f4f4}
+.culture-feature__media img{display:block;width:100%;height:100%;max-height:330px;object-fit:cover}
+.culture-feature__body{text-align:right}
+.culture-feature__tag{display:inline-block;background:#ed173d;color:#fff;font-size:12px;font-weight:900;letter-spacing:.09em;text-transform:uppercase;padding:4px 10px;margin-bottom:12px}
+.culture-feature__title{margin:0 0 14px;font-family:Georgia,'Times New Roman',serif;font-weight:900;line-height:1.02;letter-spacing:-.01em;text-transform:uppercase;font-size:clamp(24px,3.4vw,44px)}
+.culture-feature__title a{color:#111;text-decoration:none}
+.culture-feature__title a:hover{color:#ed173d}
+.culture-feature__excerpt{margin:0 0 10px;font-family:Georgia,'Times New Roman',serif;font-size:15px;line-height:1.5;color:#333}
+.culture-feature__byline{margin:0;font-family:Georgia,'Times New Roman',serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:#111}
+@media(max-width:700px){.culture-feature__row{grid-template-columns:minmax(0,1fr)}.culture-feature__body{text-align:left}}
 .reviews-panel__label{display:block;text-align:center;margin-bottom:18px;color:#ed173d;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
 .reviews-panel__carousel{position:relative}
 .review-card{display:none;margin:0;text-align:center}
@@ -255,6 +285,13 @@ img{display:block;max-width:100%}
  .featured-story{display:block;padding:0 0 23px;margin-bottom:23px;border-bottom:1px solid #ddd}
  .featured-story-title{margin:0 0 10px;font-family:Georgia,"Times New Roman",serif;font-size:24px;line-height:1.28;font-weight:400}
  .featured-story-date{color:#777;font-size:12px;text-transform:uppercase}
+.sidebar-cta__list{display:flex;flex-direction:column;gap:14px}
+.sidebar-cta__btn{display:block;text-align:center;padding:14px 12px;background:#000;color:#fff;font-family:Georgia,'Times New Roman',serif;font-weight:700;letter-spacing:.06em;font-size:15px;text-transform:uppercase;text-decoration:none;border:2px solid #000;transition:opacity .2s}
+.sidebar-cta__btn:hover{opacity:.82;color:#fff}
+.sidebar-cta__btn--outline{background:#fff;color:#000}
+.sidebar-cta__btn--outline:hover{background:#000;color:#fff;opacity:1}
+.sidebar-cta__btn--primary{background:var(--rs-red);border-color:var(--rs-red);color:#fff}
+.sidebar-cta__btn--primary:hover{background:#b90f1f;border-color:#b90f1f;color:#fff;opacity:1}
 .category-list,.author-list{list-style:none;padding:0;margin:0}
  .category-list li,.author-list li{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid #eee;font-size:15px}
 .category-list a:hover,.author-list a:hover{color:#ed173d}
