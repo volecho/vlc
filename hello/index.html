@@ -23,10 +23,12 @@
         <span class="navbar__toggle-box"><span class="navbar__toggle-inner">Menu</span></span>
       </button>
       <ul class="navbar__menu">
-        <li><a href="../index.html">Home</a></li><li><a href="../index.html">Latest</a></li><li><a href="../index.html">Reviews</a></li><li><a href="https://www.one-submit.com/">Interviews</a></li><li><a href="../hello/">About</a></li>
+        <li><a href="../index.html">Home</a></li><li><a href="../magazine/">Magazine</a></li><li><a href="../index.html">Reviews</a></li><li><a href="https://www.one-submit.com/">Interviews</a></li><li><a href="../about-us/">About</a></li>
       </ul>
     </nav>
     <div class="buttons">
+      <a href="https://www.magcloud.com/browse/issue/3397782?__r=5220251" target="_blank" rel="noopener" class="btn btn--small btn--outline">Printed Version</a>
+      <a href="https://indiefferential.github.io/mag/viewer.html?book=wnsep1" target="_blank" rel="noopener" class="btn btn--small btn--outline">Ebook Version</a>
       <a href="mailto:indiefferential@gmail.com?subject=Indiefferential%20newsletter" class="btn btn--small btn--outline">Subscribe</a>
     </div>
   </div>
@@ -43,7 +45,8 @@
     
     
     
-    <div class="article-body article-body--isolated"><iframe class="article-body__frame" title="Article design" height="720" sandbox="allow-scripts allow-forms allow-popups allow-presentation" srcdoc="&lt;!DOCTYPE html&gt;
+    <div class="article-body article-body--isolated"><iframe class="article-body__frame" title="Article design" height="720" sandbox="allow-scripts allow-forms allow-popups allow-presentation" srcdoc="```html
+&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
   &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -138,7 +141,11 @@
 
     .post-hero {
       position: relative;
-      padding: clamp(55px, 9vw, 120px) 4.5vw clamp(65px, 9vw, 115px);
+
+      /* Reduced bottom spacing so the hero content sits closer
+         to the divider and the intro section below. */
+      padding: clamp(55px, 9vw, 120px) 4.5vw clamp(30px, 4vw, 55px);
+
       border-bottom: 1px solid var(--ink);
 
       background:
@@ -181,7 +188,7 @@
       grid-template-columns: minmax(0, 1.35fr) minmax(240px, .65fr);
       align-items: end;
 
-      gap: clamp(35px, 8vw, 130px);
+      gap: clamp(25px, 6vw, 90px);
     }
 
     .hero-title {
@@ -202,10 +209,12 @@
 
     .hero-note {
       max-width: 300px;
-      margin: 0 0 5px;
+
+      /* Keeps the note tight to the divider above. */
+      margin: 0 0 0;
 
       border-top: 4px solid var(--ink);
-      padding-top: 17px;
+      padding-top: 13px;
 
       font-family: var(--serif);
       font-size: clamp(20px, 2.4vw, 29px);
@@ -215,7 +224,9 @@
 
     .hero-note small {
       display: block;
-      margin-top: 17px;
+
+      /* Keeps &quot;Since 2012...&quot; close to the main statement. */
+      margin-top: 10px;
 
       color: var(--red);
       font-family: var(--sans);
@@ -232,11 +243,13 @@
 
     .intro {
       display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(220px, .7fr);
+      grid-template-columns: 1fr;
 
       gap: clamp(30px, 8vw, 120px);
 
-      padding: clamp(52px, 8vw, 100px) 4.5vw;
+      /* Reduced top padding so the intro starts closer
+         to the divider above. */
+      padding: clamp(32px, 4.5vw, 60px) 4.5vw;
     }
 
     .intro-copy {
@@ -257,27 +270,6 @@
 
     .intro-copy strong {
       font-weight: 700;
-    }
-
-    .side-note {
-      align-self: start;
-
-      border-top: 1px solid var(--ink);
-      padding-top: 13px;
-
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.65;
-    }
-
-    .side-note b {
-      display: block;
-      margin-bottom: 12px;
-
-      color: var(--ink);
-      font-size: 11px;
-      letter-spacing: .1em;
-      text-transform: uppercase;
     }
 
     /* ---------------------------------------------------------
@@ -971,7 +963,7 @@
 
       .hero-note {
         max-width: 500px;
-        margin-top: 20px;
+        margin-top: 10px;
       }
 
       .red-band {
@@ -1002,6 +994,11 @@
       .intro,
       .closing {
         padding-inline: 20px;
+      }
+
+      .post-hero {
+        padding-top: 55px;
+        padding-bottom: 30px;
       }
 
       .red-band {
@@ -1076,9 +1073,6 @@
   &lt;/header&gt;
 
 
-
-
-
   &lt;!-- ========================================================
        INTRO
   ========================================================= --&gt;
@@ -1114,24 +1108,9 @@
 
     &lt;/div&gt;
 
-    &lt;aside class=&quot;side-note&quot;&gt;
-
-      &lt;b&gt;Our principle&lt;/b&gt;
-
-      We are interested in what is worth remembering.
-
-      &lt;br&gt;&lt;br&gt;
-
-      The next artist you love may not have millions of followers yet.
-      They may simply have a great song, an important story and something
-      genuine to say.
-
-    &lt;/aside&gt;
-
   &lt;/section&gt;
 
 
- 
   &lt;!-- ========================================================
        HISTORY
   ========================================================= --&gt;
@@ -1196,104 +1175,104 @@
   &lt;/section&gt;
 
 
+  &lt;!-- ========================================================
+       NUMBERS / WHAT WE OFFER
+  ========================================================= --&gt;
 
-&lt;!-- ========================================================
-     NUMBERS / WHAT WE OFFER
-========================================================= --&gt;
+  &lt;!-- ========================================================
+       VALUES / WHAT WE OFFER
+  ========================================================= --&gt;
 
-&lt;!-- ========================================================
-     VALUES / WHAT WE OFFER
-========================================================= --&gt;
+  &lt;!-- ========================================================
+       VALUES / WHAT WE OFFER
+  ========================================================= --&gt;
 
-&lt;!-- ========================================================
-     VALUES / WHAT WE OFFER
-========================================================= --&gt;
+  &lt;section class=&quot;section&quot;&gt;
 
-&lt;section class=&quot;section&quot;&gt;
+    &lt;div class=&quot;section-heading&quot;&gt;
+      &lt;span class=&quot;number&quot;&gt;02&lt;/span&gt;
+      &lt;h2&gt;What we stand for&lt;/h2&gt;
+      &lt;span class=&quot;rule&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
 
-  &lt;div class=&quot;section-heading&quot;&gt;
-    &lt;span class=&quot;number&quot;&gt;02&lt;/span&gt;
-    &lt;h2&gt;What we stand for&lt;/h2&gt;
-    &lt;span class=&quot;rule&quot;&gt;&lt;/span&gt;
-  &lt;/div&gt;
+    &lt;div class=&quot;values-grid&quot;&gt;
 
-  &lt;div class=&quot;values-grid&quot;&gt;
+      &lt;article class=&quot;value&quot;&gt;
+        &lt;span class=&quot;value-index&quot;&gt;01 / MAGAZINE&lt;/span&gt;
+        &lt;h3 style=&quot;color:#e21b2d;&quot;&gt;Monthly&lt;/h3&gt;
+        &lt;p&gt;
+          Our monthly magazines turn independent music, artists and
+          creative stories into something physical, collectible and lasting.
+        &lt;/p&gt;
+      &lt;/article&gt;
 
-    &lt;article class=&quot;value&quot;&gt;
-      &lt;span class=&quot;value-index&quot;&gt;01 / MAGAZINE&lt;/span&gt;
-      &lt;h3 style=&quot;color:#e21b2d;&quot;&gt;Monthly&lt;/h3&gt;
-      &lt;p&gt;
-        Our monthly magazines turn independent music, artists and
-        creative stories into something physical, collectible and lasting.
-      &lt;/p&gt;
-    &lt;/article&gt;
+      &lt;article class=&quot;value&quot;&gt;
+        &lt;span class=&quot;value-index&quot;&gt;02 / DIRECT AUDIENCE&lt;/span&gt;
+        &lt;h3 style=&quot;color:#e21b2d;&quot;&gt;9,460&lt;/h3&gt;
+        &lt;p&gt;
+          Our mailing list connects thousands of readers with weekly
+          updates, new stories, features and digital magazine issues.
+        &lt;/p&gt;
+      &lt;/article&gt;
 
-    &lt;article class=&quot;value&quot;&gt;
-      &lt;span class=&quot;value-index&quot;&gt;02 / DIRECT AUDIENCE&lt;/span&gt;
-      &lt;h3 style=&quot;color:#e21b2d;&quot;&gt;9,460&lt;/h3&gt;
-      &lt;p&gt;
-        Our mailing list connects thousands of readers with weekly
-        updates, new stories, features and digital magazine issues.
-      &lt;/p&gt;
-    &lt;/article&gt;
+      &lt;article class=&quot;value&quot;&gt;
+        &lt;span class=&quot;value-index&quot;&gt;03 / GLOBAL REACH&lt;/span&gt;
+        &lt;h3 style=&quot;color:#e21b2d;&quot;&gt;560M+&lt;/h3&gt;
+        &lt;p&gt;
+          Across the platforms where Indiefferential is present, our
+          combined potential digital reach extends to more than 560 million readers.
+        &lt;/p&gt;
+      &lt;/article&gt;
 
-    &lt;article class=&quot;value&quot;&gt;
-      &lt;span class=&quot;value-index&quot;&gt;03 / GLOBAL REACH&lt;/span&gt;
-      &lt;h3 style=&quot;color:#e21b2d;&quot;&gt;560M+&lt;/h3&gt;
-      &lt;p&gt;
-        Across the platforms where Indiefferential is present, our
-        combined potential digital reach extends to more than 560 million readers.
-      &lt;/p&gt;
-    &lt;/article&gt;
+      &lt;article class=&quot;value&quot;&gt;
+        &lt;span class=&quot;value-index&quot;&gt;04 / RADIO&lt;/span&gt;
+        &lt;h3 style=&quot;color:#e21b2d;&quot;&gt;24/7&lt;/h3&gt;
+        &lt;p&gt;
+          Our radio gives independent artists another way to be heard,
+          alongside shows, conversations and curated programming.
+        &lt;/p&gt;
+      &lt;/article&gt;
 
-    &lt;article class=&quot;value&quot;&gt;
-      &lt;span class=&quot;value-index&quot;&gt;04 / RADIO&lt;/span&gt;
-      &lt;h3 style=&quot;color:#e21b2d;&quot;&gt;24/7&lt;/h3&gt;
-      &lt;p&gt;
-        Our radio gives independent artists another way to be heard,
-        alongside shows, conversations and curated programming.
-      &lt;/p&gt;
-    &lt;/article&gt;
+      &lt;article class=&quot;value&quot;&gt;
+        &lt;span class=&quot;value-index&quot;&gt;05 / ARTIST FEATURES&lt;/span&gt;
+        &lt;h3&gt;More Than a Mention&lt;/h3&gt;
+        &lt;p&gt;
+          Interviews, Spotlights, release coverage and visual features
+          give artists space to tell their story and reach new audiences.
+        &lt;/p&gt;
+      &lt;/article&gt;
 
-    &lt;article class=&quot;value&quot;&gt;
-      &lt;span class=&quot;value-index&quot;&gt;05 / ARTIST FEATURES&lt;/span&gt;
-      &lt;h3&gt;More Than a Mention&lt;/h3&gt;
-      &lt;p&gt;
-        Interviews, Spotlights, release coverage and visual features
-        give artists space to tell their story and reach new audiences.
-      &lt;/p&gt;
-    &lt;/article&gt;
+      &lt;article class=&quot;value&quot;&gt;
+        &lt;span class=&quot;value-index&quot;&gt;06 / PRINT + DIGITAL&lt;/span&gt;
+        &lt;h3&gt;Built to Be Kept&lt;/h3&gt;
+        &lt;p&gt;
+          We combine digital discovery with physical publishing so an
+          artist&#39;s work can live beyond a feed, playlist or passing trend.
+        &lt;/p&gt;
+      &lt;/article&gt;
 
-    &lt;article class=&quot;value&quot;&gt;
-      &lt;span class=&quot;value-index&quot;&gt;06 / PRINT + DIGITAL&lt;/span&gt;
-      &lt;h3&gt;Built to Be Kept&lt;/h3&gt;
-      &lt;p&gt;
-        We combine digital discovery with physical publishing so an
-        artist&#39;s work can live beyond a feed, playlist or passing trend.
-      &lt;/p&gt;
-    &lt;/article&gt;
+      &lt;article class=&quot;value&quot;&gt;
+        &lt;span class=&quot;value-index&quot;&gt;07 / OUR TECHNOLOGY&lt;/span&gt;
+        &lt;h3&gt;Our Own Publishing Software&lt;/h3&gt;
+        &lt;p&gt;
+          We developed our own magazine creation software instead of
+          relying on generic Canva or Photoshop templates.
+        &lt;/p&gt;
+      &lt;/article&gt;
 
-    &lt;article class=&quot;value&quot;&gt;
-      &lt;span class=&quot;value-index&quot;&gt;07 / OUR TECHNOLOGY&lt;/span&gt;
-      &lt;h3&gt;Our Own Publishing Software&lt;/h3&gt;
-      &lt;p&gt;
-        We developed our own magazine creation software instead of
-        relying on generic Canva or Photoshop templates.
-      &lt;/p&gt;
-    &lt;/article&gt;
+      &lt;article class=&quot;value&quot;&gt;
+        &lt;span class=&quot;value-index&quot;&gt;08 / EDITORIAL&lt;/span&gt;
+        &lt;h3&gt;Professional Editorial Team&lt;/h3&gt;
+        &lt;p&gt;
+          Our editorial work is shaped by musicians, writers and experienced
+          creatives who care about quality, context and independent voices.
+        &lt;/p&gt;
+      &lt;/article&gt;
 
-    &lt;article class=&quot;value&quot;&gt;
-      &lt;span class=&quot;value-index&quot;&gt;08 / EDITORIAL&lt;/span&gt;
-      &lt;h3&gt;Professional Editorial Team&lt;/h3&gt;
-      &lt;p&gt;
-        Our editorial work is shaped by musicians, writers and experienced
-        creatives who care about quality, context and independent voices.
-      &lt;/p&gt;
-    &lt;/article&gt;
+    &lt;/div&gt;
 
-  &lt;/div&gt;
+  &lt;/section&gt;
 
-&lt;/section&gt;
 
   &lt;!-- ========================================================
        MAGAZINE
@@ -1372,7 +1351,9 @@
     &lt;/div&gt;
 
   &lt;/section&gt;
-&lt;!-- ========================================================
+
+
+  &lt;!-- ========================================================
        EDITORIAL RECOGNITION
   ========================================================= --&gt;
 
@@ -1410,7 +1391,6 @@
     &lt;/div&gt;
 
   &lt;/section&gt;
-
 
 
   &lt;!-- ========================================================
@@ -1678,7 +1658,6 @@
   &lt;/section&gt;
 
 
-  
   &lt;!-- ========================================================
        EDITORIAL STANDARD
   ========================================================= --&gt;
@@ -1860,7 +1839,8 @@
   if(window.ResizeObserver) new ResizeObserver(report).observe(document.documentElement);
 })();
 &lt;/script&gt;&lt;/body&gt;
-&lt;/html&gt;"></iframe></div>
+&lt;/html&gt;
+```"></iframe></div>
     
   </article>
 </main>

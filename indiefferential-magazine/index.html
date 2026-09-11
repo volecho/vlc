@@ -23,10 +23,12 @@
         <span class="navbar__toggle-box"><span class="navbar__toggle-inner">Menu</span></span>
       </button>
       <ul class="navbar__menu">
-        <li><a href="../index.html">Home</a></li><li><a href="../index.html">Latest</a></li><li><a href="../index.html">Reviews</a></li><li><a href="https://www.one-submit.com/">Interviews</a></li><li><a href="../hello/">About</a></li>
+        <li><a href="../index.html">Home</a></li><li><a href="../magazine/">Magazine</a></li><li><a href="../index.html">Reviews</a></li><li><a href="https://www.one-submit.com/">Interviews</a></li><li><a href="../about-us/">About</a></li>
       </ul>
     </nav>
     <div class="buttons">
+      <a href="https://www.magcloud.com/browse/issue/3397782?__r=5220251" target="_blank" rel="noopener" class="btn btn--small btn--outline">Printed Version</a>
+      <a href="https://indiefferential.github.io/mag/viewer.html?book=wnsep1" target="_blank" rel="noopener" class="btn btn--small btn--outline">Ebook Version</a>
       <a href="mailto:indiefferential@gmail.com?subject=Indiefferential%20newsletter" class="btn btn--small btn--outline">Subscribe</a>
     </div>
   </div>
@@ -43,8 +45,7 @@
     
     
     
-    <div class="article-body article-body--isolated"><iframe class="article-body__frame" title="Article design" height="720" sandbox="allow-scripts allow-forms allow-popups allow-presentation" srcdoc="```html
-&lt;!DOCTYPE html&gt;
+    <div class="article-body article-body--isolated"><iframe class="article-body__frame" title="Article design" height="720" sandbox="allow-scripts allow-forms allow-popups allow-presentation" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
   &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -149,7 +150,7 @@
       padding:
         clamp(60px, 9vw, 125px)
         4.5vw
-        clamp(75px, 10vw, 135px);
+        clamp(30px, 4vw, 55px);
 
       border-bottom: 1px solid var(--ink);
 
@@ -220,7 +221,7 @@
     .hero-note {
       max-width: 320px;
 
-      margin: 0 0 5px;
+      margin: 0;
 
       border-top: 4px solid var(--ink);
 
@@ -255,11 +256,9 @@
     .intro {
       display: grid;
 
-      grid-template-columns:
-        minmax(0, 1.25fr)
-        minmax(220px, .75fr);
+      grid-template-columns: minmax(0, 1fr);
 
-      gap: clamp(35px, 8vw, 120px);
+      gap: 0;
 
       padding:
         clamp(55px, 8vw, 105px)
@@ -280,31 +279,6 @@
 
     .intro-copy p:last-child {
       margin-bottom: 0;
-    }
-
-    .side-note {
-      align-self: start;
-
-      border-top: 1px solid var(--ink);
-
-      padding-top: 13px;
-
-      color: var(--muted);
-
-      font-size: 12px;
-      line-height: 1.65;
-    }
-
-    .side-note b {
-      display: block;
-
-      margin-bottom: 12px;
-
-      color: var(--ink);
-
-      font-size: 11px;
-      letter-spacing: .1em;
-      text-transform: uppercase;
     }
 
     /* =========================================================
@@ -1196,23 +1170,6 @@
 
     &lt;/div&gt;
 
-    &lt;aside class=&quot;side-note&quot;&gt;
-
-      &lt;b&gt;The idea&lt;/b&gt;
-
-      Digital discovery moves quickly.
-
-      &lt;br&gt;&lt;br&gt;
-
-      Print gives it somewhere to stay.
-
-      &lt;br&gt;&lt;br&gt;
-
-      Every issue is a snapshot of what independent culture sounds,
-      looks and feels like right now.
-
-    &lt;/aside&gt;
-
   &lt;/section&gt;
 
 
@@ -1914,8 +1871,7 @@
   if(window.ResizeObserver) new ResizeObserver(report).observe(document.documentElement);
 })();
 &lt;/script&gt;&lt;/body&gt;
-&lt;/html&gt;
-```"></iframe></div>
+&lt;/html&gt;"></iframe></div>
     
   </article>
 </main>
