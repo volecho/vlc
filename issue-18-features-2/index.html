@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Issue #18 Features — Indiefferential</title>
+<meta name="description" content="Indiefferential — Independent music, culture and art coverage from artists and scenes worth hearing.">
+<link rel="icon" href="../favicon.ico">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="header" id="js-header">
+  <div class="header__inner">
+    <div class="logo logo--wordmark">
+      <a class="logo__link" href="../index.html">
+        <span class="logo__wordmark">INDIEFFERENTIAL</span>
+        <span class="logo__strap">Music · Culture · Art</span>
+      </a>
+    </div>
+    <nav class="navbar">
+      <button class="navbar__toggle" type="button" aria-label="Menu" aria-haspopup="true" aria-expanded="false">
+        <span class="navbar__toggle-box"><span class="navbar__toggle-inner">Menu</span></span>
+      </button>
+      <ul class="navbar__menu">
+        <li><a href="../index.html">Home</a></li><li><a href="../index.html">Latest</a></li><li><a href="../index.html">Reviews</a></li><li><a href="https://www.one-submit.com/">Interviews</a></li><li><a href="../hello/">About</a></li>
+      </ul>
+    </nav>
+    <div class="buttons">
+      <a href="mailto:indiefferential@gmail.com?subject=Indiefferential%20newsletter" class="btn btn--small btn--outline">Subscribe</a>
+    </div>
+  </div>
+  <div class="rs-trending">
+    <div class="wrapper">
+      <span class="rs-trending-label">Trending</span>
+      <a href="../hello/">New music</a><a href="../hello/">Culture</a><a href="../hello/">Reviews</a><a href="../hello/">Artists to watch</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <article class="article-page">
+    <a class="article-back" href="../index.html">← Back to Indiefferential</a>
+    <div class="post-meta">Issue · Indiefferential.com · June 30, 2026</div>
+    <h1>Issue #18 Features</h1>
+    
+    <div class="article-body" style="text-align:center"><p>This is a placeholder for the Issue #18 Features article. Replace this text with the real write-up — the layout, image, and front-page card are already wired up to match the rest of the site.</p></div>
+    <div class="tag-pill-row article-tags"><a class="tag-pill" href="../tags/issue-18/">issue-18</a></div>
+  </article>
+</main>
+<footer class="footer">
+  <div class="wrapper">
+    <a class="logo footer__logo" href="../index.html">
+      <span class="logo__wordmark">INDIEFFERENTIAL</span>
+      <span class="logo__strap">Music · Culture · Art</span>
+    </a>
+    <div class="footer__copy"><p>© Indiefferential 2026 — Independent music and culture magazine</p></div>
+  </div>
+</footer>
+<script>
+(function(){
+  document.querySelectorAll('.article-body .post__iframe, .article-body .post__video').forEach(function(box){
+    var el = box.querySelector('iframe, video');
+    if(!el) return;
+    var w = parseFloat(el.getAttribute('width')), h = parseFloat(el.getAttribute('height'));
+    if(w > 0 && h > 0) box.style.setProperty('--embed-aspect-ratio', (h / w * 100) + '%');
+  });
+})();
+</script>
+<script>
+var menuToggle = document.querySelector('.navbar__toggle');
+var navbar = document.querySelector('.navbar');
+if(menuToggle && navbar){
+  menuToggle.addEventListener('click', function(){
+    var isOpen = navbar.classList.toggle('is-open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+}
+document.querySelectorAll('img[loading]').forEach(function(img){
+  if(img.complete) img.classList.add('is-loaded');
+  else img.addEventListener('load', function(){ this.classList.add('is-loaded'); });
+});
+(function(){
+  window.addEventListener('message', function(event){
+    var data = event.data || {};
+    if(data.type !== 'indiefferential-article-height') return;
+    var frame = document.querySelector('.article-body__frame');
+    if(frame && data.height) frame.style.height = Math.max(720, Number(data.height) + 8) + 'px';
+  });
+})();
+(function(){
+  var carousel = document.querySelector('[data-review-carousel]');
+  if(!carousel) return;
+  var slides = carousel.querySelectorAll('.review-card');
+  var dots = document.querySelectorAll('.reviews-panel__dot');
+  var idx = 0, timer = null;
+  function show(i){
+    idx = (i + slides.length) % slides.length;
+    slides.forEach(function(s, si){ s.classList.toggle('is-active', si === idx); });
+    dots.forEach(function(d, di){ d.classList.toggle('is-active', di === idx); });
+  }
+  function restart(){
+    if(timer) clearInterval(timer);
+    if(slides.length > 1) timer = setInterval(function(){ show(idx + 1); }, 7000);
+  }
+  dots.forEach(function(d, di){
+    d.addEventListener('click', function(){ show(di); restart(); });
+  });
+  restart();
+})();
+</script>
+</body>
+</html>
