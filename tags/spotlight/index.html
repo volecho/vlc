@@ -23,7 +23,7 @@
         <span class="navbar__toggle-box"><span class="navbar__toggle-inner">Menu</span></span>
       </button>
       <ul class="navbar__menu">
-        <li><a href="../../index.html">Home</a></li><li><a href="../../magazine/">Magazine</a></li><li><a href="../../index.html">Reviews</a></li><li><a href="https://www.one-submit.com/">Interviews</a></li><li><a href="../../about-us/">About</a></li>
+        <li><a href="../../index.html">Home</a></li><li><a href="../../magazine/">Magazine</a></li><li><a href="../../tags/music-reviews/">Reviews</a></li><li><a href="https://www.one-submit.com/">Interviews</a></li><li><a href="../../about-us/">About</a></li>
       </ul>
     </nav>
     <div class="buttons">
@@ -39,15 +39,58 @@
 </header>
 
 <main>
-  <section class="news-section">
+  <section class="news-section tag-archive-news">
     <div class="container">
       <h1 class="section-title">#spotlight</h1>
-      <div class="content-layout">
-        <section class="latest-section">
-          <h2 class="latest-title">Latest Posts</h2>
+      <div class="news-grid">
         
-        </section>
-        <div class="sidebar">
+        
+        
+        
+        
+      </div>
+    </div>
+  </section>
+  
+  <section class="music-lists">
+    <div class="container">
+      <div class="music-lists__row">
+        <div class="music-lists__inner">
+          <span class="music-lists__label">Music Lists</span>
+          <h2 class="music-lists__title"><a href="https://indiefferential.com/radio/" target="_blank" rel="noopener">Indiefferential Radio &mdash; Listen Live 24/7</a></h2>
+          <div class="music-lists__byline">By <a href="https://indiefferential.com/radio/" target="_blank" rel="noopener">Indiefferential</a></div>
+          <div class="music-lists__player">
+            <iframe src="https://zeno.fm/player/indiefferential" width="100%" height="280" frameborder="0" scrolling="no" allow="autoplay" loading="lazy" title="Indiefferential Radio player"></iframe>
+          </div>
+        </div>
+        <div class="mag-panel">
+          <a class="mag-panel__cover" href="https://indiefferential.com/magazine/"><img src="https://raw.githubusercontent.com/indiefferential/mag/main/books/wnaug1/pages/page01.jpg" alt="Indiefferential Magazine — current issue cover" loading="lazy"></a>
+          <div class="mag-panel__actions">
+            <a class="mag-btn mag-btn--solid" href="https://indiefferential.com/magazine/">Get the Magazine</a>
+            <a class="mag-btn mag-btn--solid" href="https://indiefferential.com/magazine/">Get Digital Access</a>
+            <a class="mag-btn" href="https://indiefferential.com/magazine/">Give a Gift</a>
+            <a class="mag-btn" href="mailto:indiefferential@gmail.com?subject=Magazine%20customer%20service">Customer Service</a>
+            <div class="mag-panel__signup">
+              <span class="mag-panel__signup-label">Newsletter Signup</span>
+              <form class="mag-panel__signup-form" action="mailto:indiefferential@gmail.com" method="post" enctype="text/plain">
+                <input type="email" name="email" placeholder="Enter Your Email" aria-label="Enter your email" required>
+                <button type="submit">Sign Up</button>
+              </form>
+              <p class="mag-panel__fineprint">By providing your information, you agree to our Terms of Use and Privacy Policy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="wrapper" id="latest">
+    <div class="container container--sidebar">
+      <div class="articles is-sidebar">
+        <div class="articles__inner articles__inner--layout-1">
+          <p>No posts are tagged #spotlight yet.</p>
+        </div>
+      </div>
+      <div class="sidebar">
   <div class="sidebar__item featured-posts">
     <h2 class="h6 sidebar__item-title">Featured Stories</h2>
     
@@ -67,9 +110,8 @@
     <ul class="cards authors__list"><li class="authors__item">No authors yet.</li></ul>
   </div>
 </div>
-      </div>
     </div>
-  </section>
+  </div>
 </main>
 <footer class="footer">
   <div class="wrapper">
