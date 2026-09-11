@@ -197,6 +197,7 @@ img{display:block;max-width:100%}
 .music-lists__byline a:hover{color:#ed173d}
 .music-lists__player{border:1px solid #111;background:#111;line-height:0}
 .music-lists__player iframe{display:block;width:100%;height:280px;border:0}
+.music-lists__side{min-width:0;display:flex;flex-direction:column;gap:34px}
 /* Reviews block — same "headline pull-quote" treatment as a print feature:
    a heavy black rule, a bold serif quote, a small-caps byline, another rule.
    Sized to sit as a true equal-weight twin of the Radio block beside it. */
@@ -711,16 +712,22 @@ img{display:block;max-width:100%}
 
 /* Buttons inside article bodies match the header "Subscribe" button */
 .article-body .btn,.article-body a.button,.article-body button,
-.post-body .btn,.post-body a.button,.post-body button{
+.post-body .btn,.post-body a.button,.post-body button,
+.article-body a[style*="background"],.article-body a[style*="background-color"],
+.post-body a[style*="background"],.post-body a[style*="background-color"]{
   display:inline-flex;align-items:center;justify-content:center;
-  min-height:35px;padding:9px 15px;margin:4px 6px 4px 0;
-  color:#fff;background:#ed173d;border:1px solid #ed173d;
-  font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:800;
-  letter-spacing:.1em;text-transform:uppercase;text-decoration:none;
-  border-radius:0;cursor:pointer;transition:color .2s,background .2s;
+  min-height:35px;padding:9px 15px;margin:4px 6px 4px 0 !important;
+  color:#fff !important;background:var(--rs-red) !important;border:1px solid var(--rs-red) !important;
+  font-family:Arial,Helvetica,sans-serif !important;font-size:10px !important;font-weight:800 !important;
+  letter-spacing:.1em !important;text-transform:uppercase;text-decoration:none !important;
+  border-radius:0 !important;cursor:pointer;transition:color .2s,background .2s;
 }
 .article-body .btn:hover,.article-body a.button:hover,.article-body button:hover,
-.post-body .btn:hover,.post-body a.button:hover,.post-body button:hover{color:#ed173d;background:#fff}
+.post-body .btn:hover,.post-body a.button:hover,.post-body button:hover,
+.article-body a[style*="background"]:hover,.article-body a[style*="background-color"]:hover,
+.post-body a[style*="background"]:hover,.post-body a[style*="background-color"]:hover{
+  color:var(--rs-red) !important;background:#fff !important;border-color:var(--rs-red) !important;
+}
 
 .article-back{color:var(--rs-red)}
 
