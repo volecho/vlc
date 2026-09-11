@@ -181,7 +181,7 @@
   </div>
 </article>
         </div>
-        <nav class="pagination desc" aria-label="Pagination"><a href="../page/6/" class="btn btn--outline pagination__nav" aria-label="Older posts">‹ Prev</a><a href="../../index.html" class="btn btn--outline">1</a><span class="btn btn--outline pagination__gap" aria-hidden="true">…</span><a href="../page/6/" class="btn btn--outline">6</a><span class="btn btn--outline" aria-current="page">7</span><a href="../page/8/" class="btn btn--outline">8</a><span class="btn btn--outline pagination__gap" aria-hidden="true">…</span><a href="../page/47/" class="btn btn--outline">47</a><a href="../page/8/" class="btn btn--outline pagination__nav" aria-label="Newer posts">Next ›</a></nav>
+        <nav class="pagination desc" aria-label="Pagination"><a href="../page/8/" class="btn btn--outline pagination__nav" data-page="8" aria-label="Older posts">Previous</a><a href="../page/6/" class="btn btn--outline pagination__nav" data-page="6" aria-label="Newer posts">Next</a></nav>
       </div>
       <div class="sidebar">
   <div class="sidebar__item featured-posts">
@@ -241,6 +241,26 @@ document.querySelectorAll('img[loading]').forEach(function(img){
   if(img.complete) img.classList.add('is-loaded');
   else img.addEventListener('load', function(){ this.classList.add('is-loaded'); });
 });
+(function(){
+  var carousel = document.querySelector('[data-review-carousel]');
+  if(!carousel) return;
+  var slides = carousel.querySelectorAll('.review-card');
+  var dots = document.querySelectorAll('.reviews-panel__dot');
+  var idx = 0, timer = null;
+  function show(i){
+    idx = (i + slides.length) % slides.length;
+    slides.forEach(function(s, si){ s.classList.toggle('is-active', si === idx); });
+    dots.forEach(function(d, di){ d.classList.toggle('is-active', di === idx); });
+  }
+  function restart(){
+    if(timer) clearInterval(timer);
+    if(slides.length > 1) timer = setInterval(function(){ show(idx + 1); }, 7000);
+  }
+  dots.forEach(function(d, di){
+    d.addEventListener('click', function(){ show(di); restart(); });
+  });
+  restart();
+})();
 </script>
 </body>
 </html>

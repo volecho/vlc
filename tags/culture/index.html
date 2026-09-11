@@ -524,6 +524,26 @@ document.querySelectorAll('img[loading]').forEach(function(img){
   if(img.complete) img.classList.add('is-loaded');
   else img.addEventListener('load', function(){ this.classList.add('is-loaded'); });
 });
+(function(){
+  var carousel = document.querySelector('[data-review-carousel]');
+  if(!carousel) return;
+  var slides = carousel.querySelectorAll('.review-card');
+  var dots = document.querySelectorAll('.reviews-panel__dot');
+  var idx = 0, timer = null;
+  function show(i){
+    idx = (i + slides.length) % slides.length;
+    slides.forEach(function(s, si){ s.classList.toggle('is-active', si === idx); });
+    dots.forEach(function(d, di){ d.classList.toggle('is-active', di === idx); });
+  }
+  function restart(){
+    if(timer) clearInterval(timer);
+    if(slides.length > 1) timer = setInterval(function(){ show(idx + 1); }, 7000);
+  }
+  dots.forEach(function(d, di){
+    d.addEventListener('click', function(){ show(di); restart(); });
+  });
+  restart();
+})();
 </script>
 </body>
 </html>

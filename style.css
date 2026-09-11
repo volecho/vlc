@@ -185,7 +185,9 @@ img{display:block;max-width:100%}
 .news-card.center .news-card-title{font-size:38px;line-height:1.08}
 .news-author{margin-top:12px;font-size:11px;text-transform:uppercase;letter-spacing:.04em;opacity:.9}
 .music-lists{padding:45px 0 55px;border-top:4px solid var(--rs-black);border-bottom:1px solid var(--rs-rule,#e2e2e2)}
-.music-lists__inner{max-width:760px}
+.music-lists__row{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.music-lists__row--single{grid-template-columns:minmax(0,1fr)}
+.music-lists__row--single .music-lists__inner{max-width:760px;margin:0 auto}
 .music-lists__label{display:inline-block;margin-bottom:14px;color:#ed173d;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
 .music-lists__title{margin:0 0 10px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(28px,4vw,42px);font-weight:400;line-height:1.08;letter-spacing:-.02em}
 .music-lists__title a{color:inherit;text-decoration:none}
@@ -195,7 +197,24 @@ img{display:block;max-width:100%}
 .music-lists__byline a:hover{color:#ed173d}
 .music-lists__player{border:1px solid #111;background:#111;line-height:0}
 .music-lists__player iframe{display:block;width:100%;height:280px;border:0}
-@media(max-width:760px){.music-lists{padding:32px 0 40px}.music-lists__player iframe{height:240px}}
+/* Reviews block — same "headline pull-quote" treatment as a print feature:
+   a heavy black rule, a bold serif quote, a small-caps byline, another rule.
+   Sized to sit as a true equal-weight twin of the Radio block beside it. */
+.reviews-panel{display:flex;flex-direction:column;justify-content:center;min-height:280px}
+.reviews-panel__label{display:block;text-align:center;margin-bottom:18px;color:#ed173d;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.reviews-panel__carousel{position:relative}
+.review-card{display:none;margin:0;text-align:center}
+.review-card.is-active{display:block}
+.review-card__rule{height:4px;background:#111;margin:0 0 24px}
+.review-card__rule--bottom{margin:24px 0 0}
+.review-card__quote{margin:0;font-family:Georgia,"Times New Roman",serif;font-weight:700;color:#111;line-height:1.3;letter-spacing:-.01em}
+.review-card__byline{margin:16px 0 0;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#444}
+.reviews-panel__dots{display:flex;justify-content:center;gap:6px;margin-top:26px}
+.reviews-panel__dot{width:7px;height:7px;border-radius:50%;background:#ccc;border:0;padding:0;cursor:pointer}
+.reviews-panel__dot:hover{background:#999}
+.reviews-panel__dot.is-active{background:#ed173d}
+@media(max-width:900px){.music-lists__row{gap:40px}}
+@media(max-width:760px){.music-lists{padding:32px 0 40px}.music-lists__player iframe{height:240px}.music-lists__row{grid-template-columns:minmax(0,1fr);gap:36px}.reviews-panel{min-height:0;margin-top:6px}}
 .cover-spot{padding:30px 0}
 .cover-spot__grid{display:grid;grid-template-columns:1fr 4px 1fr;align-items:stretch}
 .cover-spot__divider{background:var(--rs-black)}
