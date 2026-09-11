@@ -93,7 +93,7 @@
     <ul class="cards latest-review__list"><li class="card__item"><h3 class="card__title"><a href="../../articles/married-in-mount-airy-turn-the-car-around-strays/" class="invert">Married in Mount Airy - Turn The Car Around - Strays</a></h3><div class="card__meta">Feature</div></li><li class="card__item"><h3 class="card__title"><a href="../../articles/lisieux-abide-track-by-track-review/" class="invert">Lisieux - Abide! - Track By Track Review</a></h3><div class="card__meta">Feature</div></li></ul>
   </div>
   <div class="sidebar__item sidebar-cta">
-    <div class="sidebar-cta__list"><a class="sidebar-cta__btn sidebar-cta__btn--primary" href="../../articles/hello/">GET featured today</a><a class="sidebar-cta__btn sidebar-cta__btn--primary" href="../../index.html#">GET DIGITAL ACCESS</a><a class="sidebar-cta__btn sidebar-cta__btn--outline" href="https://indiefferential.com/magazine/">GIVE A GIFT</a><a class="sidebar-cta__btn sidebar-cta__btn--outline" href="mailto:indiefferential@gmail.com">CUSTOMER SERVICE</a></div>
+    <div class="sidebar-cta__list"><a class="sidebar-cta__btn sidebar-cta__btn--primary" href="https://indiefferential.com/magazine/">GET featured today</a><a class="sidebar-cta__btn sidebar-cta__btn--primary" href="https://indiefferential.com/magazine/">GET DIGITAL ACCESS</a><a class="sidebar-cta__btn sidebar-cta__btn--outline" href="https://indiefferential.com/magazine/">GIVE A GIFT</a><a class="sidebar-cta__btn sidebar-cta__btn--outline" href="mailto:indiefferential@gmail.com">CUSTOMER SERVICE</a></div>
   </div>
   <div class="sidebar__item authors">
     <h2 class="h6 sidebar__item-title">Authors</h2>
@@ -115,6 +115,16 @@
     <div class="footer__copy"><p>© Indiefferential 2026 — Independent music and culture magazine</p></div>
   </div>
 </footer>
+<script>
+(function(){
+  document.querySelectorAll('.article-body .post__iframe, .article-body .post__video').forEach(function(box){
+    var el = box.querySelector('iframe, video');
+    if(!el) return;
+    var w = parseFloat(el.getAttribute('width')), h = parseFloat(el.getAttribute('height'));
+    if(w > 0 && h > 0) box.style.setProperty('--embed-aspect-ratio', (h / w * 100) + '%');
+  });
+})();
+</script>
 <script>
 var menuToggle = document.querySelector('.navbar__toggle');
 var navbar = document.querySelector('.navbar');

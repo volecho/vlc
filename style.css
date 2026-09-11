@@ -329,6 +329,8 @@ img{display:block;max-width:100%}
 .article-body figcaption{margin-top:10px;font-size:14px;color:#666;text-align:center}
 .article-body table{display:block;max-width:100%;overflow-x:auto;margin:47px 0 0}
 .article-body pre{overflow-x:auto;margin:47px 0 0}
+.article-body .post__iframe,.article-body .post__video{position:relative;display:block;width:100%;max-width:100%;margin:47px 0 0;padding:0 0 var(--embed-aspect-ratio,62.857%);overflow:hidden;height:auto}
+.article-body .post__iframe>iframe,.article-body .post__iframe>video,.article-body .post__video>iframe,.article-body .post__video>video{position:absolute;top:0;left:0;width:100%;height:100%;max-width:none;margin:0;border:0}
 .article-back{display:inline-block;margin-bottom:24px;color:#ed173d;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
 .article-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:35px}.article-tags a{border:1px solid #ddd;padding:7px 12px;font-size:11px;text-transform:uppercase}
  @media(max-width:1050px){.header-inner{padding:20px 25px}.container{padding:0 25px}.main-nav{gap:15px}.news-grid{grid-template-columns:1fr 1.3fr 1fr;grid-template-rows:240px 240px}.news-card{min-height:240px}.news-card.center{min-height:496px}.news-card-title{font-size:20px}.news-card.center .news-card-title{font-size:31px}.content-layout{grid-template-columns:minmax(0,1fr) 320px;gap:40px}.latest-post{grid-template-columns:280px minmax(0,1fr)}.latest-title{font-size:36px}.latest-post-title{font-size:32px}.sidebar-title{font-size:28px}.featured-story-title{font-size:22px}}
@@ -702,6 +704,8 @@ img{display:block;max-width:100%}
 .article-body figcaption{margin-top:10px;font-size:14px;color:#666;text-align:center}
 .article-body table{display:block;max-width:100%;overflow-x:auto;margin:47px 0 0}
 .article-body pre{overflow-x:auto;margin:47px 0 0}
+.article-body .post__iframe,.article-body .post__video{position:relative;display:block;width:100%;max-width:100%;margin:47px 0 0;padding:0 0 var(--embed-aspect-ratio,62.857%);overflow:hidden;height:auto}
+.article-body .post__iframe>iframe,.article-body .post__iframe>video,.article-body .post__video>iframe,.article-body .post__video>video{position:absolute;top:0;left:0;width:100%;height:100%;max-width:none;margin:0;border:0}
 .article-body--isolated{max-width:none;font-family:inherit;font-size:inherit;line-height:normal}
 .post-body-preview-frame,.article-body__frame{display:block;width:100%;min-height:720px;border:0;background:#fff}
 
