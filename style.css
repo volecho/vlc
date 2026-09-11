@@ -258,13 +258,17 @@ img{display:block;max-width:100%}
 .cover-spot__headline a{color:inherit;text-decoration:none}
 .cover-spot__headline a:hover{color:var(--rs-red)}
 .cover-spot__byline{font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#666}
-.cover-spot__news{position:relative;overflow:hidden;background:var(--rs-red);color:#fff;padding:24px 30px;padding-left:26px;display:flex;flex-direction:column;justify-content:center}
-.cover-spot__news-label{font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;opacity:.85;margin-bottom:10px}
-.cover-spot__news-headline{margin:0 0 10px;font-family:Arial,Helvetica,sans-serif;font-weight:900;font-size:clamp(19px,2vw,25px);line-height:1.1;letter-spacing:-.01em;text-transform:uppercase;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.cover-spot__news{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--rs-red) 0%,#9d0f1e 100%);color:#fff;padding:24px 30px;padding-left:26px;display:flex;flex-direction:column;justify-content:center}
+.cover-spot__news::before{content:'';position:absolute;top:-45%;right:-10%;width:240px;height:240px;background:radial-gradient(circle,rgba(255,255,255,.18) 0%,rgba(255,255,255,0) 70%);z-index:0;pointer-events:none}
+.cover-spot__news::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 2px,transparent 2px 26px);z-index:0;pointer-events:none}
+.cover-spot__news-label{position:relative;z-index:1;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;opacity:.85;margin-bottom:10px}
+.cover-spot__news-headline{position:relative;z-index:1;margin:0 0 10px;font-family:Arial,Helvetica,sans-serif;font-weight:900;font-size:clamp(19px,2vw,25px);line-height:1.1;letter-spacing:-.01em;text-transform:uppercase;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .cover-spot__news-headline a{color:#fff;text-decoration:none}
 .cover-spot__news-headline a:hover{color:var(--rs-black)}
-.cover-spot__news-byline{font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
-.cover-spot__ribbon{position:absolute;right:0;bottom:0;background:var(--rs-black);color:#fff;font-family:Arial,Helvetica,sans-serif;font-weight:900;font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:8px 14px 8px 22px;clip-path:polygon(14px 0,100% 0,100% 100%,0% 100%)}
+.cover-spot__news-byline{position:relative;z-index:1;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:600;letter-spacing:.02em;text-transform:none;color:rgba(255,255,255,.92)}
+.cover-spot__news-cta{position:relative;z-index:1;display:inline-flex;align-items:center;gap:8px;align-self:flex-start;margin-top:16px;background:#fff;color:var(--rs-red);font-family:Arial,Helvetica,sans-serif;font-weight:900;font-size:11px;letter-spacing:.09em;text-transform:uppercase;padding:11px 20px;text-decoration:none;box-shadow:4px 4px 0 rgba(0,0,0,.35);transition:transform .15s ease,box-shadow .15s ease,background .15s ease,color .15s ease}
+.cover-spot__news-cta:hover{background:var(--rs-black);color:#fff;transform:translate(-2px,-2px);box-shadow:6px 6px 0 rgba(0,0,0,.5)}
+.cover-spot__ribbon{position:absolute;right:0;bottom:0;z-index:2;background:var(--rs-black);color:#fff;font-family:Arial,Helvetica,sans-serif;font-weight:900;font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:8px 14px 8px 22px;clip-path:polygon(14px 0,100% 0,100% 100%,0% 100%)}
 @media(max-width:760px){.cover-spot{padding:22px 0}.cover-spot__grid{grid-template-columns:1fr;gap:0}.cover-spot__divider{display:none}.cover-spot__print{padding:0 0 22px}.cover-spot__news{padding:22px 26px 28px;border-top:4px solid var(--rs-black)}.cover-spot__frame{height:200px}}
  /* The news mosaic above intentionally stays unchanged. The content below
     it follows the larger editorial scale used by the supplied index page. */
