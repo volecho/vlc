@@ -153,6 +153,14 @@ document.querySelectorAll('img[loading]').forEach(function(img){
   else img.addEventListener('load', function(){ this.classList.add('is-loaded'); });
 });
 (function(){
+  window.addEventListener('message', function(event){
+    var data = event.data || {};
+    if(data.type !== 'indiefferential-article-height') return;
+    var frame = document.querySelector('.article-body__frame');
+    if(frame && data.height) frame.style.height = Math.max(720, Number(data.height) + 8) + 'px';
+  });
+})();
+(function(){
   var carousel = document.querySelector('[data-review-carousel]');
   if(!carousel) return;
   var slides = carousel.querySelectorAll('.review-card');

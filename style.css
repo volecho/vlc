@@ -659,6 +659,8 @@ img{display:block;max-width:100%}
 .article-page h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(38px,5vw,68px);font-weight:400;letter-spacing:-.04em;line-height:1.02}
 .article-page .article-cover{max-height:680px;object-fit:cover}
 .article-body{font-family:Georgia,"Times New Roman",serif;font-size:19px;line-height:1.75}
+.article-body--isolated{font-family:inherit;font-size:inherit;line-height:normal}
+.post-body-preview-frame,.article-body__frame{display:block;width:100%;min-height:720px;border:0;background:#fff}
 .article-back{color:var(--rs-red)}
 
 @media(max-width:1080px){
