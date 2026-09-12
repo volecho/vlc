@@ -27,7 +27,7 @@
         </span>
       </button>
       <ul class="navbar__menu">
-        <li><a href="../index.html">Home</a></li><li><a href="../magazine/">Magazine</a></li><li><a href="../tags/music-reviews/">Reviews</a></li><li><a href="../tags/interviews/">Interviews</a></li><li><a href="../about-us/">About</a></li><li><a href="../contact-us/">Contact</a></li><li><a href="../spotlight/">Spotlight</a></li>
+        <li><a href="../index.html">Home</a></li><li><a href="../magazine/">Magazine</a></li><li><a href="../podcasts/">Podcasts</a></li><li><a href="../about-us/">About</a></li><li><a href="../spotlight/">Spotlight</a></li><li><a href="../contact-us/">Contact</a></li><li><a href="../lumiere/">LUMIÈRE </a></li>
       </ul>
     </nav>
     <div class="buttons">
@@ -130,7 +130,7 @@
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/body&gt;
-        &lt;/html&gt;"></iframe></div><div><p>Released on September 20th, April Gallo's latest single, "Rent My Heart For Free," is making waves with its soulful and emotional depth. The track is a powerful blend of blues, jazz, and neo-soul, underscored by a stirring piano melody that tugs at the heartstrings. Through raw, heartfelt lyrics like "Bet that you knew all along that you’d rent my heart for free," Gallo paints a vivid picture of love, betrayal, and the heartache of giving everything only to feel taken for granted.</p></div><div><p class="align-center"></p><div class="post__iframe"><iframe width="100%" height="352" style="border-radius: 12px;" src="https://open.spotify.com/embed/track/7dDoVy08CYe2mvDZqlc79d?utm_source=generator" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div></div><div><p><br><br>The ballad captures the essence of vulnerability, with Gallo’s commanding vocals leading listeners through a lush arrangement of piano, drums, and bass. Each note resonates with the bluesy undertones of heartache, creating a soundscape that immerses you fully in the emotional journey.</p></div><div><p class="align-center"><img loading="lazy" src="https://i.ibb.co/m9Q8wkH/image.png" alt="image" border="0" data-is-external-image="true"></p></div><div><p><br><br>Gallo penned "Rent My Heart For Free" during a deeply reflective period in her life, using music as a therapeutic tool to process heartbreak. Drawing inspiration from the timeless sounds of blues and jazz, she crafted the song with intention, letting the prominent piano and evocative melodies echo the feelings of deception that inspired its creation.<br><br>This latest release from Gallo is sure to be a standout, offering both an emotional catharsis and a reminder of the power of soulful storytelling in music.</p></div><div><p class="align-center"><strong><a href="https://www.instagram.com/aprilgallomusic/" target="_blank" rel="noopener noreferrer">Instagram</a></strong></p></div></div>
+        &lt;/html&gt;"></iframe></div><div><p>Released on September 20th, April Gallo's latest single, "Rent My Heart For Free," is making waves with its soulful and emotional depth. The track is a powerful blend of blues, jazz, and neo-soul, underscored by a stirring piano melody that tugs at the heartstrings. Through raw, heartfelt lyrics like "Bet that you knew all along that you’d rent my heart for free," Gallo paints a vivid picture of love, betrayal, and the heartache of giving everything only to feel taken for granted.</p></div><div><p class="align-center"></p><div class="post__iframe"><iframe data-embed-service="Spotify" width="100%" height="352" style="border-radius: 12px;" data-embed-src="https://open.spotify.com/embed/track/7dDoVy08CYe2mvDZqlc79d?utm_source=generator" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div></div><div><p><br><br>The ballad captures the essence of vulnerability, with Gallo’s commanding vocals leading listeners through a lush arrangement of piano, drums, and bass. Each note resonates with the bluesy undertones of heartache, creating a soundscape that immerses you fully in the emotional journey.</p></div><div><p class="align-center"><img loading="lazy" src="https://i.ibb.co/m9Q8wkH/image.png" alt="image" border="0" data-is-external-image="true"></p></div><div><p><br><br>Gallo penned "Rent My Heart For Free" during a deeply reflective period in her life, using music as a therapeutic tool to process heartbreak. Drawing inspiration from the timeless sounds of blues and jazz, she crafted the song with intention, letting the prominent piano and evocative melodies echo the feelings of deception that inspired its creation.<br><br>This latest release from Gallo is sure to be a standout, offering both an emotional catharsis and a reminder of the power of soulful storytelling in music.</p></div><div><p class="align-center"><strong><a href="https://www.instagram.com/aprilgallomusic/" target="_blank" rel="noopener noreferrer">Instagram</a></strong></p></div></div>
     
   </article>
 </main>
@@ -143,6 +143,13 @@
     <div class="footer__copy"><p>© Indiefferential 2026 — Independent music and culture magazine</p></div>
   </div>
 </footer>
+<div class="cookie-consent" id="cookie-consent" hidden>
+  <p class="cookie-consent__text">We use cookies for essential site functionality. YouTube, Spotify, and Bandcamp players embedded in posts are only loaded after you click them, which may set that service’s own cookies. Newsletter sign-ups are processed by Web3Forms, a third-party form service. <a href="../terms/">Privacy Policy</a></p>
+  <div class="cookie-consent__actions">
+    <button type="button" class="cookie-consent__btn cookie-consent__btn--decline" id="cookie-consent-decline">Necessary Only</button>
+    <button type="button" class="cookie-consent__btn cookie-consent__btn--accept" id="cookie-consent-accept">Accept</button>
+  </div>
+</div>
 <script>
 (function(){
   document.querySelectorAll('.article-body .post__iframe, .article-body .post__video').forEach(function(box){
@@ -150,6 +157,82 @@
     if(!el) return;
     var w = parseFloat(el.getAttribute('width')), h = parseFloat(el.getAttribute('height'));
     if(w > 0 && h > 0) box.style.setProperty('--embed-aspect-ratio', (h / w * 100) + '%');
+  });
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('iframe[data-embed-src]').forEach(function(iframe){
+    var parent = iframe.parentElement;
+    if(!parent) return;
+    if(window.getComputedStyle(parent).position === 'static') parent.style.position = 'relative';
+    var service = iframe.getAttribute('data-embed-service') || 'this service';
+    var facade = document.createElement('button');
+    facade.type = 'button';
+    facade.className = 'embed-facade';
+    facade.style.position = 'absolute';
+    facade.style.top = '0';
+    facade.style.left = '0';
+    facade.style.width = '100%';
+    facade.style.height = '100%';
+    facade.innerHTML =
+      '<span class="embed-facade__play">▶</span>' +
+      '<span class="embed-facade__label">Click to load ' + service + '</span>' +
+      '<span class="embed-facade__note">Loads content from ' + service + ', which may set its own cookies.</span>';
+    facade.addEventListener('click', function(){
+      iframe.setAttribute('src', iframe.getAttribute('data-embed-src'));
+      facade.remove();
+    }, {once:true});
+    parent.insertBefore(facade, iframe);
+  });
+})();
+</script>
+<script>
+(function(){
+  var KEY = 'idf_consent';
+  var banner = document.getElementById('cookie-consent');
+  if(!banner) return;
+  var stored = null;
+  try{ stored = localStorage.getItem(KEY); }catch(e){}
+  if(!stored) banner.hidden = false;
+  var accept = document.getElementById('cookie-consent-accept');
+  var decline = document.getElementById('cookie-consent-decline');
+  function choose(value){
+    try{ localStorage.setItem(KEY, value); }catch(e){}
+    banner.hidden = true;
+  }
+  if(accept) accept.addEventListener('click', function(){ choose('accepted'); });
+  if(decline) decline.addEventListener('click', function(){ choose('declined'); });
+})();
+</script>
+<script>
+(function(){
+  var form = document.getElementById('newsletter-signup-form');
+  if(!form) return;
+  var note = document.getElementById('newsletter-signup-fineprint');
+  var originalNote = note ? note.textContent : '';
+  var button = form.querySelector('button[type="submit"]');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(button) button.disabled = true;
+    var data = new FormData(form);
+    fetch("https://api.web3forms.com/submit", {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: data
+    }).then(function(res){ return res.json(); }).then(function(json){
+      if(json.success){
+        form.reset();
+        if(note) note.textContent = "Thanks for signing up — check your inbox soon!";
+      } else {
+        if(note) note.textContent = "Something went wrong. Please try again in a moment.";
+      }
+    }).catch(function(){
+      if(note) note.textContent = "Something went wrong. Please try again in a moment.";
+    }).finally(function(){
+      if(button) button.disabled = false;
+      if(note) setTimeout(function(){ note.textContent = originalNote; }, 6000);
+    });
   });
 })();
 </script>

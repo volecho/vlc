@@ -27,7 +27,7 @@
         </span>
       </button>
       <ul class="navbar__menu">
-        <li><a href="../index.html">Home</a></li><li><a href="../magazine/">Magazine</a></li><li><a href="../tags/music-reviews/">Reviews</a></li><li><a href="../tags/interviews/">Interviews</a></li><li><a href="../about-us/">About</a></li><li><a href="../contact-us/">Contact</a></li><li><a href="../spotlight/">Spotlight</a></li>
+        <li><a href="../index.html">Home</a></li><li><a href="../magazine/">Magazine</a></li><li><a href="../podcasts/">Podcasts</a></li><li><a href="../about-us/">About</a></li><li><a href="../spotlight/">Spotlight</a></li><li><a href="../contact-us/">Contact</a></li><li><a href="../lumiere/">LUMIÈRE </a></li>
       </ul>
     </nav>
     <div class="buttons">
@@ -143,6 +143,13 @@
     <div class="footer__copy"><p>© Indiefferential 2026 — Independent music and culture magazine</p></div>
   </div>
 </footer>
+<div class="cookie-consent" id="cookie-consent" hidden>
+  <p class="cookie-consent__text">We use cookies for essential site functionality. YouTube, Spotify, and Bandcamp players embedded in posts are only loaded after you click them, which may set that service’s own cookies. Newsletter sign-ups are processed by Web3Forms, a third-party form service. <a href="../terms/">Privacy Policy</a></p>
+  <div class="cookie-consent__actions">
+    <button type="button" class="cookie-consent__btn cookie-consent__btn--decline" id="cookie-consent-decline">Necessary Only</button>
+    <button type="button" class="cookie-consent__btn cookie-consent__btn--accept" id="cookie-consent-accept">Accept</button>
+  </div>
+</div>
 <script>
 (function(){
   document.querySelectorAll('.article-body .post__iframe, .article-body .post__video').forEach(function(box){
@@ -150,6 +157,82 @@
     if(!el) return;
     var w = parseFloat(el.getAttribute('width')), h = parseFloat(el.getAttribute('height'));
     if(w > 0 && h > 0) box.style.setProperty('--embed-aspect-ratio', (h / w * 100) + '%');
+  });
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('iframe[data-embed-src]').forEach(function(iframe){
+    var parent = iframe.parentElement;
+    if(!parent) return;
+    if(window.getComputedStyle(parent).position === 'static') parent.style.position = 'relative';
+    var service = iframe.getAttribute('data-embed-service') || 'this service';
+    var facade = document.createElement('button');
+    facade.type = 'button';
+    facade.className = 'embed-facade';
+    facade.style.position = 'absolute';
+    facade.style.top = '0';
+    facade.style.left = '0';
+    facade.style.width = '100%';
+    facade.style.height = '100%';
+    facade.innerHTML =
+      '<span class="embed-facade__play">▶</span>' +
+      '<span class="embed-facade__label">Click to load ' + service + '</span>' +
+      '<span class="embed-facade__note">Loads content from ' + service + ', which may set its own cookies.</span>';
+    facade.addEventListener('click', function(){
+      iframe.setAttribute('src', iframe.getAttribute('data-embed-src'));
+      facade.remove();
+    }, {once:true});
+    parent.insertBefore(facade, iframe);
+  });
+})();
+</script>
+<script>
+(function(){
+  var KEY = 'idf_consent';
+  var banner = document.getElementById('cookie-consent');
+  if(!banner) return;
+  var stored = null;
+  try{ stored = localStorage.getItem(KEY); }catch(e){}
+  if(!stored) banner.hidden = false;
+  var accept = document.getElementById('cookie-consent-accept');
+  var decline = document.getElementById('cookie-consent-decline');
+  function choose(value){
+    try{ localStorage.setItem(KEY, value); }catch(e){}
+    banner.hidden = true;
+  }
+  if(accept) accept.addEventListener('click', function(){ choose('accepted'); });
+  if(decline) decline.addEventListener('click', function(){ choose('declined'); });
+})();
+</script>
+<script>
+(function(){
+  var form = document.getElementById('newsletter-signup-form');
+  if(!form) return;
+  var note = document.getElementById('newsletter-signup-fineprint');
+  var originalNote = note ? note.textContent : '';
+  var button = form.querySelector('button[type="submit"]');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(button) button.disabled = true;
+    var data = new FormData(form);
+    fetch("https://api.web3forms.com/submit", {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: data
+    }).then(function(res){ return res.json(); }).then(function(json){
+      if(json.success){
+        form.reset();
+        if(note) note.textContent = "Thanks for signing up — check your inbox soon!";
+      } else {
+        if(note) note.textContent = "Something went wrong. Please try again in a moment.";
+      }
+    }).catch(function(){
+      if(note) note.textContent = "Something went wrong. Please try again in a moment.";
+    }).finally(function(){
+      if(button) button.disabled = false;
+      if(note) setTimeout(function(){ note.textContent = originalNote; }, 6000);
+    });
   });
 })();
 </script>
