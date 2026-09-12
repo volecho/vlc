@@ -31,13 +31,13 @@
       </ul>
     </nav>
     <div class="buttons">
-      <a href="../membership/" class="btn btn--small btn--outline">Subscribe</a>
+      <a href="https://buymeacoffee.com/indiefferential" target="_blank" rel="noopener" class="btn btn--small btn--outline">Subscribe</a>
     </div>
   </div>
   <div class="rs-trending">
     <div class="wrapper">
       <span class="rs-trending-label">Trending</span>
-      <a href="../index.html">New music</a><a href="../tags/culture/">Culture</a><a href="../tags/music-reviews/">Reviews</a><a href="../index.html">Artists to watch</a>
+      <a href="../index.html">New music</a><a href="../tags/culture/">Culture</a><a href="../tags/music-reviews/">Reviews</a><a href="../magazine-library/">Past Issues</a>
     </div>
   </div>
 </header>
@@ -1699,7 +1699,351 @@
         &lt;/p&gt;
 
       &lt;/div&gt;
+&lt;!-- ============================================================
+     INDIEFFERENTIAL — ISSUE LIBRARY (embeddable post version)
+     Paste this whole block into an HTML / Code / Embed block in
+     your site builder&#39;s post editor. It pulls issues live from
+     your books.json on GitHub Pages, so it updates automatically
+     whenever you publish a new issue.
+============================================================= --&gt;
+&lt;div class=&quot;idflib&quot;&gt;
 
+  &lt;style&gt;
+    .idflib {
+      --idf-red: #e21b2d;
+      --idf-ink: #0a0a0a;
+      --idf-paper: #ffffff;
+      --idf-soft: #f5f5f3;
+      --idf-line: #d9d9d7;
+      --idf-muted: #77736f;
+      --idf-serif: Georgia, &quot;Times New Roman&quot;, serif;
+      --idf-sans: Arial, Helvetica, sans-serif;
+      --idf-shadow: 7px 7px 0 var(--idf-ink);
+
+      box-sizing: border-box;
+      background: var(--idf-paper);
+      color: var(--idf-ink);
+      font-family: var(--idf-sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .idflib *,
+    .idflib *::before,
+    .idflib *::after {
+      box-sizing: border-box;
+    }
+
+    .idflib ::selection {
+      background: var(--idf-red);
+      color: #fff;
+    }
+
+    .idflib a {
+      color: inherit;
+    }
+
+    .idflib .idf-head {
+      padding: 0 0 26px;
+      margin-bottom: 34px;
+      border-bottom: 1px solid var(--idf-ink);
+    }
+
+    .idflib .idf-kicker {
+      display: block;
+      margin-bottom: 14px;
+      color: var(--idf-red);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .idflib .idf-head h2 {
+      margin: 0 0 10px;
+      font-family: var(--idf-serif);
+      font-size: clamp(34px, 5vw, 58px);
+      font-weight: 900;
+      letter-spacing: -.055em;
+      line-height: .92;
+    }
+
+    .idflib .idf-head h2::after {
+      content: &quot;.&quot;;
+      color: var(--idf-red);
+    }
+
+    .idflib .idf-head p {
+      margin: 0;
+      max-width: 420px;
+      font-family: var(--idf-serif);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--idf-ink);
+    }
+
+    .idflib #idf-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 45px 24px;
+    }
+
+    .idflib .idf-card {
+      display: block;
+      position: relative;
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .25s ease;
+    }
+
+    .idflib .idf-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .idflib .idf-cover {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 8.5 / 11;
+      background: #fff;
+      border: 1px solid var(--idf-ink);
+      overflow: hidden;
+      box-shadow: var(--idf-shadow);
+      transition: box-shadow .25s ease, transform .25s ease;
+    }
+
+    .idflib .idf-card:hover .idf-cover {
+      transform: translate(-3px, -3px);
+      box-shadow: 10px 10px 0 var(--idf-ink);
+    }
+
+    .idflib .idf-cover img,
+    .idflib .idf-cover canvas {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .idflib .idf-spine {
+      position: absolute;
+      z-index: 5;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 8px;
+      background: linear-gradient(90deg, rgba(0, 0, 0, .28), transparent);
+      pointer-events: none;
+    }
+
+    .idflib .idf-meta {
+      padding: 15px 1px 0;
+    }
+
+    .idflib .idf-meta::before {
+      content: &quot;ISSUE&quot;;
+      display: block;
+      margin-bottom: 6px;
+      color: var(--idf-red);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+
+    .idflib .idf-title {
+      font-family: var(--idf-serif);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.05;
+    }
+
+    .idflib .idf-pages {
+      margin-top: 7px;
+      color: var(--idf-red);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .idflib #idf-empty,
+    .idflib #idf-err {
+      display: none;
+      max-width: 900px;
+      margin: 20px 0;
+      padding: 40px 22px;
+      border: 1px solid var(--idf-ink);
+      background: var(--idf-soft);
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .idflib code {
+      padding: 3px 6px;
+      background: rgba(226, 27, 45, .08);
+      color: var(--idf-red);
+      font-family: monospace;
+    }
+
+    @media (max-width: 1050px) {
+      .idflib #idf-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 700px) {
+      .idflib #idf-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 16px; }
+      .idflib .idf-title { font-size: 15px; }
+    }
+
+    @media (max-width: 420px) {
+      .idflib #idf-grid { grid-template-columns: 1fr; }
+      .idflib .idf-cover { max-width: 320px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .idflib .idf-card, .idflib .idf-cover { transition: none; }
+    }
+  &lt;/style&gt;
+
+  &lt;div class=&quot;idf-head&quot;&gt;
+    &lt;span class=&quot;idf-kicker&quot;&gt;Indiefferential / Magazine&lt;/span&gt;
+    &lt;h2&gt;Issue Library&lt;/h2&gt;
+    &lt;p&gt;Pick an issue to open it as a flipbook&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div id=&quot;idf-grid&quot; aria-label=&quot;Magazine issues&quot;&gt;&lt;/div&gt;
+
+  &lt;p id=&quot;idf-empty&quot;&gt;
+    No issues yet — add one to &lt;code&gt;books.json&lt;/code&gt;.
+  &lt;/p&gt;
+
+  &lt;p id=&quot;idf-err&quot;&gt;
+    Could not load the issue list right now. Please refresh the page.
+  &lt;/p&gt;
+
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/legacy/build/pdf.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    (async function () {
+      // Where the library lives — used for flipbook viewer links and
+      // for resolving any relative cover/file paths in books.json.
+      var IDF_BASE = &quot;https://indiefferential.github.io/mag/&quot;;
+
+      // GitHub Pages doesn&#39;t reliably send CORS headers, so we read
+      // books.json straight from the raw file instead — that always
+      // sends Access-Control-Allow-Origin: * and works cross-domain.
+      var IDF_BOOKS_JSON_RAW = &quot;https://raw.githubusercontent.com/indiefferential/mag/main/books.json&quot;;
+
+      if (window.pdfjsLib) {
+        pdfjsLib.GlobalWorkerOptions.workerSrc =
+          &quot;https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/legacy/build/pdf.worker.min.js&quot;;
+      }
+
+      var grid = document.getElementById(&quot;idf-grid&quot;);
+
+      function resolveUrl(path) {
+        if (!path) return path;
+        if (/^https?:\/\//i.test(path)) return path;
+        return IDF_BASE + path.replace(/^\.?\//, &quot;&quot;);
+      }
+
+      async function pdfFirstPageThumb(file, imgEl) {
+        try {
+          var pdf = await pdfjsLib.getDocument(resolveUrl(file)).promise;
+          var page = await pdf.getPage(1);
+          var base = page.getViewport({ scale: 1 });
+          var scale = 400 / base.width;
+          var viewport = page.getViewport({ scale: scale });
+          var canvas = document.createElement(&quot;canvas&quot;);
+          var context = canvas.getContext(&quot;2d&quot;);
+
+          canvas.width = viewport.width;
+          canvas.height = viewport.height;
+
+          await page.render({
+            canvasContext: context,
+            viewport: viewport
+          }).promise;
+
+          imgEl.replaceWith(canvas);
+        } catch (err) {
+          // Leave the paper placeholder visible if rendering fails.
+        }
+      }
+
+      async function loadBooks() {
+        // Try the raw GitHub copy first (reliable CORS), then fall back
+        // to same-origin and the GitHub Pages copy just in case.
+        var candidates = [IDF_BOOKS_JSON_RAW, &quot;books.json&quot;, IDF_BASE + &quot;books.json&quot;];
+
+        for (var i = 0; i &lt; candidates.length; i++) {
+          try {
+            var res = await fetch(candidates[i]);
+            if (res.ok) return await res.json();
+          } catch (err) {
+            // try next candidate
+          }
+        }
+        throw new Error(&quot;could not load books.json&quot;);
+      }
+
+      try {
+        var books = await loadBooks();
+
+        if (!books || !books.length) {
+          document.getElementById(&quot;idf-empty&quot;).style.display = &quot;block&quot;;
+          return;
+        }
+
+        books.forEach(function (book) {
+          var isPdf = book.type === &quot;pdf&quot;;
+
+          var card = document.createElement(&quot;a&quot;);
+          card.className = &quot;idf-card&quot;;
+          card.href = IDF_BASE + &quot;viewer.html?book=&quot; + encodeURIComponent(book.slug);
+          card.target = &quot;_blank&quot;;
+          card.rel = &quot;noopener&quot;;
+
+          var cover = document.createElement(&quot;div&quot;);
+          cover.className = &quot;idf-cover&quot;;
+
+          var image = document.createElement(&quot;img&quot;);
+          image.alt = book.title + &quot; cover&quot;;
+
+          var spine = document.createElement(&quot;span&quot;);
+          spine.className = &quot;idf-spine&quot;;
+          spine.setAttribute(&quot;aria-hidden&quot;, &quot;true&quot;);
+
+          var meta = document.createElement(&quot;div&quot;);
+          meta.className = &quot;idf-meta&quot;;
+
+          var title = document.createElement(&quot;div&quot;);
+          title.className = &quot;idf-title&quot;;
+          title.textContent = book.title;
+
+          var pages = document.createElement(&quot;div&quot;);
+          pages.className = &quot;idf-pages&quot;;
+          pages.textContent = isPdf ? &quot;PDF&quot; : book.totalPages + &quot; pages&quot;;
+
+          cover.append(image, spine);
+          meta.append(title, pages);
+          card.append(cover, meta);
+          grid.appendChild(card);
+
+          if (isPdf &amp;&amp; book.cover) {
+            image.src = resolveUrl(book.cover);
+          } else if (isPdf &amp;&amp; book.file) {
+            pdfFirstPageThumb(book.file, image);
+          } else if (book.cover) {
+            image.src = resolveUrl(book.cover);
+          }
+        });
+      } catch (err) {
+        document.getElementById(&quot;idf-err&quot;).style.display = &quot;block&quot;;
+      }
+    })();
+  &lt;/script&gt;
+
+&lt;/div&gt;
 
       &lt;div class=&quot;feature-list&quot;&gt;
 

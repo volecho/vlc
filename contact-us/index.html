@@ -31,13 +31,13 @@
       </ul>
     </nav>
     <div class="buttons">
-      <a href="../membership/" class="btn btn--small btn--outline">Subscribe</a>
+      <a href="https://buymeacoffee.com/indiefferential" target="_blank" rel="noopener" class="btn btn--small btn--outline">Subscribe</a>
     </div>
   </div>
   <div class="rs-trending">
     <div class="wrapper">
       <span class="rs-trending-label">Trending</span>
-      <a href="../index.html">New music</a><a href="../tags/culture/">Culture</a><a href="../tags/music-reviews/">Reviews</a><a href="../index.html">Artists to watch</a>
+      <a href="../index.html">New music</a><a href="../tags/culture/">Culture</a><a href="../tags/music-reviews/">Reviews</a><a href="../magazine-library/">Past Issues</a>
     </div>
   </div>
 </header>
@@ -204,10 +204,47 @@
       text-transform: uppercase;
     }
 
-    /* INTRO */
+    /* GENERAL SECTION */
+
+    .section {
+      padding: clamp(65px, 9vw, 120px) 4.5vw;
+    }
+
+    .heading {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 38px;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 13px;
+    }
+
+    .heading .number {
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+
+    .heading h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(38px, 5vw, 68px);
+      letter-spacing: -.065em;
+      line-height: .95;
+    }
+
+    .heading .rule {
+      flex: 1;
+      height: 1px;
+      margin-left: 10px;
+      background: var(--line);
+    }
+
+    /* INTRO / START A CONVERSATION */
 
     .intro {
-      padding: clamp(60px, 8vw, 105px) 4.5vw;
+      padding: 0;
     }
 
     .intro-grid {
@@ -217,31 +254,12 @@
       align-items: end;
     }
 
-    .intro p {
+    .intro-main &gt; p:first-child {
       max-width: 850px;
       margin: 0;
       font-family: var(--serif);
-      font-size: clamp(23px, 2.7vw, 15px);
+      font-size: clamp(23px, 2.7vw, 35px);
       line-height: 1.45;
-    }
-
-    .intro-note {
-      border-top: 4px solid var(--ink);
-      padding-top: 14px;
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .08em;
-      line-height: 1.6;
-      text-transform: uppercase;
-    }
-
-    .intro-note strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--red);
-      font-size: 10px;
-      letter-spacing: .14em;
     }
 
     .intro-button {
@@ -273,9 +291,9 @@
     }
 
     .intro-paid {
-      margin: 42px 0 0 !important;
+      margin: 38px 0 0;
       font-family: var(--serif);
-      font-size: clamp(23px, 2.7vw, 35px);
+      font-size: clamp(21px, 2.5vw, 32px);
       line-height: 1.45;
     }
 
@@ -284,9 +302,9 @@
     }
 
     .intro-reach {
-      margin: 28px 0 0 !important;
+      margin: 25px 0 0;
       font-family: var(--serif);
-      font-size: clamp(23px, 2.7vw, 35px);
+      font-size: clamp(21px, 2.5vw, 32px);
       line-height: 1.45;
     }
 
@@ -294,29 +312,95 @@
       font-weight: 700;
     }
 
-    /* SECTION */
-
-    .section {
-      padding: clamp(65px, 9vw, 120px) 4.5vw;
+    .intro-note {
+      border-top: 4px solid var(--ink);
+      padding: 18px 20px 20px;
+      background: var(--soft);
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      line-height: 1.6;
+      text-transform: uppercase;
     }
 
-    .heading {
+    .intro-note strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--red);
+      font-size: 10px;
+      letter-spacing: .14em;
+    }
+
+    /* PAID PROMO */
+
+    .im-paid-promo,
+    .im-paid-promo * {
+      box-sizing: border-box;
+    }
+
+    .im-paid-promo {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(65px, 9vw, 120px) 4.5vw;
+      background:
+        linear-gradient(
+          90deg,
+          transparent 0 49.9%,
+          rgba(10, 10, 10, .045) 50%,
+          transparent 50.1%
+        ),
+        linear-gradient(
+          0deg,
+          transparent 0 49.9%,
+          rgba(10, 10, 10, .045) 50%,
+          transparent 50.1%
+        ),
+        var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+    }
+
+    .im-paid-promo::after {
+      content: &quot;PROMO&quot;;
+      position: absolute;
+      right: 1vw;
+      bottom: -8px;
+      z-index: 0;
+      color: var(--red);
+      font-family: var(--serif);
+      font-size: clamp(90px, 18vw, 250px);
+      font-weight: 900;
+      letter-spacing: -.12em;
+      line-height: .8;
+      opacity: .055;
+      pointer-events: none;
+    }
+
+    .im-paid-promo__inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1380px;
+      margin: 0 auto;
+    }
+
+    .im-paid-promo__heading {
       display: flex;
       align-items: baseline;
       gap: 16px;
-      margin-bottom: 42px;
+      margin: 0 0 20px;
       border-bottom: 1px solid var(--ink);
       padding-bottom: 13px;
     }
 
-    .heading .number {
+    .im-paid-promo__number {
       color: var(--red);
       font-size: 11px;
       font-weight: 800;
       letter-spacing: .12em;
     }
 
-    .heading h2 {
+    .im-paid-promo__heading h2 {
       margin: 0;
       font-family: var(--serif);
       font-size: clamp(38px, 5vw, 68px);
@@ -324,109 +408,87 @@
       line-height: .95;
     }
 
-    .heading .rule {
+    .im-paid-promo__rule {
       flex: 1;
       height: 1px;
       margin-left: 10px;
       background: var(--line);
     }
 
-    /* CONTACT */
-
-    .contact-box {
+    .im-paid-promo__intro {
       display: grid;
-      grid-template-columns: .75fr 1.25fr;
-      border-top: 1px solid var(--ink);
-      border-left: 1px solid var(--ink);
+      grid-template-columns: minmax(0, 1.2fr) minmax(220px, .8fr);
+      gap: clamp(30px, 8vw, 120px);
+      align-items: end;
+      margin-bottom: 42px;
     }
 
-    .contact-lead {
-      min-height: 330px;
-      padding: 28px 25px;
-      border-right: 1px solid var(--ink);
-      border-bottom: 1px solid var(--ink);
-      background: var(--ink);
-      color: #fff;
+    .im-paid-promo__lead {
+      max-width: 760px;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(22px, 2.5vw, 32px);
+      line-height: 1.25;
     }
 
-    .contact-lead small {
-      display: block;
-      margin-bottom: 55px;
-      color: var(--red);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: .12em;
+    .im-paid-promo__note {
+      margin: 0;
+      border-top: 4px solid var(--ink);
+      padding-top: 14px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      line-height: 1.55;
       text-transform: uppercase;
     }
 
-    .contact-lead h3 {
-      margin: 0;
-      font-family: var(--serif);
-      font-size: clamp(38px, 5vw, 65px);
-      letter-spacing: -.07em;
-      line-height: .9;
-    }
-
-    .contact-copy {
-      min-height: 330px;
-      padding: 30px;
-      border-right: 1px solid var(--ink);
-      border-bottom: 1px solid var(--ink);
-    }
-
-    .contact-copy p {
-      margin: 0 0 22px;
-      color: #454240;
-      font-size: 15px;
-      line-height: 1.75;
-    }
-
-    .contact-copy a {
+    .im-paid-promo__note strong {
+      display: block;
+      margin-bottom: 8px;
       color: var(--red);
-      font-weight: 700;
+      font-size: 10px;
+      letter-spacing: .14em;
     }
 
-    /* SUBMISSION CARDS */
-
-    .cards {
+    .im-paid-promo__grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       border-top: 1px solid var(--ink);
       border-left: 1px solid var(--ink);
     }
 
-    .card {
+    .im-paid-promo__card {
       display: flex;
-      min-height: 350px;
+      min-height: 310px;
       flex-direction: column;
       padding: 25px 22px 22px;
       border-right: 1px solid var(--ink);
       border-bottom: 1px solid var(--ink);
       background: var(--paper);
-      transition: transform .22s ease, box-shadow .22s ease;
+      transition:
+        transform .22s ease,
+        box-shadow .22s ease;
     }
 
-    .card:nth-child(2) {
+    .im-paid-promo__card:nth-child(2),
+    .im-paid-promo__card:nth-child(3) {
       background: var(--soft);
     }
 
-    .card:nth-child(3) {
+    .im-paid-promo__card:nth-child(5) {
       background: var(--ink);
       color: #fff;
     }
 
-    .card:nth-child(4) {
-      background: var(--soft);
-    }
-
-    .card:hover {
+    .im-paid-promo__card:hover {
       position: relative;
       z-index: 2;
       transform: translate(-3px, -3px);
       box-shadow: var(--shadow);
     }
 
-    .card-index {
+    .im-paid-promo__index {
       display: block;
       margin-bottom: 48px;
       color: var(--red);
@@ -436,52 +498,70 @@
       text-transform: uppercase;
     }
 
-    .card h3 {
-      margin: 0 0 18px;
+    .im-paid-promo__card h3 {
+      margin: 0 0 12px;
       font-family: var(--serif);
-      font-size: clamp(30px, 4vw, 48px);
-      letter-spacing: -.06em;
-      line-height: .92;
+      font-size: clamp(28px, 3vw, 38px);
+      letter-spacing: -.055em;
+      line-height: .94;
     }
 
-    .card p {
-      max-width: 650px;
-      margin: 0 0 20px;
+    .im-paid-promo__offer {
+      min-height: 48px;
+      margin: 0 0 22px;
       color: #454240;
-      font-size: 14px;
-      line-height: 1.75;
+      font-size: 13px;
+      line-height: 1.6;
     }
 
-    .card:nth-child(3) p {
+    .im-paid-promo__card:nth-child(5) .im-paid-promo__offer {
       color: #d4d4d2;
     }
 
-    .card a {
-      color: var(--red);
-      font-weight: 700;
-    }
-
-    .card:nth-child(3) a {
-      color: #fff;
-    }
-
-    /* MUSOSOUP WIDGET */
-
-    .widget {
-      display: flex;
-      justify-content: center;
-      margin-top: 25px;
-      padding: 25px;
+    .im-paid-promo__button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      width: 100%;
+      margin-top: auto;
+      padding: 14px 15px;
       border: 1px solid var(--ink);
-      background: var(--soft);
+      background: var(--ink);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition:
+        background .2s ease,
+        border-color .2s ease,
+        color .2s ease;
     }
 
-    .widget iframe {
-      display: block;
-      width: 238px;
-      max-width: 100%;
-      height: 60px;
-      border: 0;
+    .im-paid-promo__button span:last-child {
+      font-size: 17px;
+      line-height: 0;
+    }
+
+    .im-paid-promo__button:hover,
+    .im-paid-promo__card:nth-child(5) .im-paid-promo__button {
+      border-color: var(--red);
+      background: var(--red);
+    }
+
+    .im-paid-promo__card:nth-child(5) .im-paid-promo__button:hover {
+      border-color: #fff;
+      background: #fff;
+      color: var(--ink);
+    }
+
+    .im-paid-promo__footnote {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.5;
     }
 
     /* RED BAND */
@@ -513,7 +593,7 @@
       line-height: .98;
     }
 
-    /* GROOVER */
+    /* GUARANTEED FEEDBACK */
 
     .feedback-layout {
       display: grid;
@@ -707,10 +787,16 @@
 
     /* RESPONSIVE */
 
+    @media (min-width: 1050px) {
+      .im-paid-promo__card:nth-child(5) {
+        grid-column: span 2;
+        min-height: 250px;
+      }
+    }
+
     @media (max-width: 900px) {
       .hero-grid,
       .intro-grid,
-      .contact-box,
       .feedback-layout,
       .support-layout {
         grid-template-columns: 1fr;
@@ -718,307 +804,6 @@
 
       .red-band {
         grid-template-columns: 1fr;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 650px) {
-      .kicker {
-        padding-inline: 20px;
-      }
-
-      .kicker span:last-child {
-        display: none;
-      }
-
-      .hero,
-      .intro,
-      .section,
-      .cta {
-        padding-inline: 20px;
-      }
-
-      .red-band {
-        margin-inline: 20px;
-      }
-
-      .heading {
-        gap: 10px;
-      }
-
-      .heading .rule {
-        display: none;
-      }
-
-      .contact-lead,
-      .contact-copy {
-        min-height: 0;
-      }
-
-      .card {
-        min-height: 0;
-      }
-
-      .card-index {
-        margin-bottom: 28px;
-      }
-
-      .widget {
-        padding: 20px;
-      }
-    }
-
-    /* PAID PROMO */
-
-    :root {
-      --im-red: #e21b2d;
-      --im-ink: #0a0a0a;
-      --im-paper: #ffffff;
-      --im-soft: #f5f5f3;
-      --im-line: #d9d9d7;
-      --im-muted: #77736f;
-      --im-serif: Georgia, &quot;Times New Roman&quot;, serif;
-      --im-sans: Arial, Helvetica, sans-serif;
-      --im-shadow: 7px 7px 0 var(--im-ink);
-    }
-
-    .im-paid-promo,
-    .im-paid-promo * {
-      box-sizing: border-box;
-    }
-
-    .im-paid-promo {
-      position: relative;
-      overflow: hidden;
-      padding: clamp(65px, 9vw, 120px) 4.5vw;
-      background:
-        linear-gradient(
-          90deg,
-          transparent 0 49.9%,
-          rgba(10, 10, 10, .045) 50%,
-          transparent 50.1%
-        ),
-        linear-gradient(
-          0deg,
-          transparent 0 49.9%,
-          rgba(10, 10, 10, .045) 50%,
-          transparent 50.1%
-        ),
-        var(--im-paper);
-      color: var(--im-ink);
-      font-family: var(--im-sans);
-    }
-
-    .im-paid-promo::after {
-      content: &quot;PROMO&quot;;
-      position: absolute;
-      right: 1vw;
-      bottom: -8px;
-      z-index: 0;
-      color: var(--im-red);
-      font-family: var(--im-serif);
-      font-size: clamp(90px, 18vw, 250px);
-      font-weight: 900;
-      letter-spacing: -.12em;
-      line-height: .8;
-      opacity: .055;
-      pointer-events: none;
-    }
-
-    .im-paid-promo__inner {
-      position: relative;
-      z-index: 1;
-      max-width: 1380px;
-      margin: 0 auto;
-    }
-
-    .im-paid-promo__heading {
-      display: flex;
-      align-items: baseline;
-      gap: 16px;
-      margin: 0 0 20px;
-      border-bottom: 1px solid var(--im-ink);
-      padding-bottom: 13px;
-    }
-
-    .im-paid-promo__number {
-      color: var(--im-red);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: .12em;
-    }
-
-    .im-paid-promo__heading h2 {
-      margin: 0;
-      font-family: var(--im-serif);
-      font-size: clamp(38px, 5vw, 68px);
-      letter-spacing: -.065em;
-      line-height: .95;
-    }
-
-    .im-paid-promo__rule {
-      flex: 1;
-      height: 1px;
-      margin-left: 10px;
-      background: var(--im-line);
-    }
-
-    .im-paid-promo__intro {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(220px, .8fr);
-      gap: clamp(30px, 8vw, 120px);
-      align-items: end;
-      margin-bottom: 42px;
-    }
-
-    .im-paid-promo__lead {
-      max-width: 760px;
-      margin: 0;
-      font-family: var(--im-serif);
-      font-size: clamp(22px, 2.5vw, 32px);
-      line-height: 1.25;
-    }
-
-    .im-paid-promo__note {
-      margin: 0;
-      border-top: 4px solid var(--im-ink);
-      padding-top: 14px;
-      color: var(--im-muted);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: .08em;
-      line-height: 1.55;
-      text-transform: uppercase;
-    }
-
-    .im-paid-promo__note strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--im-red);
-      font-size: 10px;
-      letter-spacing: .14em;
-    }
-
-    .im-paid-promo__grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      border-top: 1px solid var(--im-ink);
-      border-left: 1px solid var(--im-ink);
-    }
-
-    .im-paid-promo__card {
-      display: flex;
-      min-height: 310px;
-      flex-direction: column;
-      padding: 25px 22px 22px;
-      border-right: 1px solid var(--im-ink);
-      border-bottom: 1px solid var(--im-ink);
-      background: var(--im-paper);
-      transition:
-        transform .22s ease,
-        box-shadow .22s ease;
-    }
-
-    .im-paid-promo__card:nth-child(2),
-    .im-paid-promo__card:nth-child(3) {
-      background: var(--im-soft);
-    }
-
-    .im-paid-promo__card:nth-child(5) {
-      background: var(--im-ink);
-      color: #fff;
-    }
-
-    .im-paid-promo__card:hover {
-      position: relative;
-      z-index: 2;
-      transform: translate(-3px, -3px);
-      box-shadow: var(--im-shadow);
-    }
-
-    .im-paid-promo__index {
-      display: block;
-      margin-bottom: 48px;
-      color: var(--im-red);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-
-    .im-paid-promo__card h3 {
-      margin: 0 0 12px;
-      font-family: var(--im-serif);
-      font-size: clamp(28px, 3vw, 38px);
-      letter-spacing: -.055em;
-      line-height: .94;
-    }
-
-    .im-paid-promo__offer {
-      min-height: 48px;
-      margin: 0 0 22px;
-      color: #454240;
-      font-size: 13px;
-      line-height: 1.6;
-    }
-
-    .im-paid-promo__card:nth-child(5) .im-paid-promo__offer {
-      color: #d4d4d2;
-    }
-
-    .im-paid-promo__button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 15px;
-      width: 100%;
-      margin-top: auto;
-      padding: 14px 15px;
-      border: 1px solid var(--im-ink);
-      background: var(--im-ink);
-      color: #fff;
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: .1em;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition:
-        background .2s ease,
-        border-color .2s ease,
-        color .2s ease;
-    }
-
-    .im-paid-promo__button span:last-child {
-      font-size: 17px;
-      line-height: 0;
-    }
-
-    .im-paid-promo__button:hover,
-    .im-paid-promo__card:nth-child(5) .im-paid-promo__button {
-      border-color: var(--im-red);
-      background: var(--im-red);
-    }
-
-    .im-paid-promo__card:nth-child(5) .im-paid-promo__button:hover {
-      border-color: #fff;
-      background: #fff;
-      color: var(--im-ink);
-    }
-
-    .im-paid-promo__footnote {
-      margin: 18px 0 0;
-      color: var(--im-muted);
-      font-size: 10px;
-      line-height: 1.5;
-    }
-
-    @media (min-width: 1050px) {
-      .im-paid-promo__card:nth-child(5) {
-        grid-column: span 2;
-        min-height: 250px;
       }
     }
 
@@ -1038,6 +823,42 @@
 
       .im-paid-promo__index {
         margin-bottom: 25px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .kicker {
+        padding-inline: 20px;
+      }
+
+      .kicker span:last-child {
+        display: none;
+      }
+
+      .hero,
+      .section,
+      .cta {
+        padding-inline: 20px;
+      }
+
+      .red-band {
+        margin-inline: 20px;
+      }
+
+      .heading {
+        gap: 10px;
+      }
+
+      .heading .rule {
+        display: none;
+      }
+
+      .intro-grid {
+        gap: 35px;
+      }
+
+      .intro-note {
+        margin-top: 5px;
       }
     }
 
@@ -1068,6 +889,7 @@
     &lt;span&gt;Music · Artists · Projects · Independent Culture&lt;/span&gt;
   &lt;/div&gt;
 
+
   &lt;!-- HERO --&gt;
 
   &lt;header class=&quot;hero&quot;&gt;
@@ -1089,51 +911,8 @@
     &lt;/div&gt;
   &lt;/header&gt;
 
-  &lt;!-- INTRO --&gt;
 
-  &lt;section class=&quot;intro&quot;&gt;
-
-    &lt;div class=&quot;intro-grid&quot;&gt;
-
-      &lt;div class=&quot;intro-main&quot;&gt;
-
-        &lt;p&gt;
-          If you’re interested in being featured on Indiefferential, collaborating with us, sharing your music, product or project, or simply getting in touch, we’d love to hear from you. For feature inquiries, submissions, print issue requests, or anything else, feel free to email
-          &lt;/a&gt;.
-        &lt;/p&gt;
-
-        &lt;a
-          class=&quot;intro-button&quot;
-          href=&quot;mailto:indiefferential@gmail.com&quot;
-        &gt;
-          &lt;span&gt;Free Submission / Contact Us&lt;/span&gt;
-          &lt;span&gt;↗&lt;/span&gt;
-        &lt;/a&gt;
-
-        &lt;p class=&quot;intro-paid&quot;&gt;
-          &lt;strong&gt;Free submissions. Optional paid promotion.&lt;/strong&gt;
-          Music and projects are always welcome for printing and publishing consideration at no cost. Since Indiefferential does not use advertising on the website, we also offer optional paid promo routes for artists and projects that want additional exposure.
-        &lt;/p&gt;
-
-        &lt;p class=&quot;intro-reach&quot;&gt;
-          For the price of one coffee, you can put your project in front of
-          &lt;strong&gt;9K+ mailing list members&lt;/strong&gt; and reach a potential
-          audience of &lt;strong&gt;560M+ across our platforms&lt;/strong&gt;.
-        &lt;/p&gt;
-
-      &lt;/div&gt;
-
-      &lt;div class=&quot;intro-note&quot;&gt;
-        &lt;strong&gt;Submissions&lt;/strong&gt;
-        Choose the route that fits your music, project and the kind
-        of Indiefferential feature you are looking for.
-      &lt;/div&gt;
-
-    &lt;/div&gt;
-
-  &lt;/section&gt;
-
-  &lt;!-- CONTACT --&gt;
+  &lt;!-- 01 / START A CONVERSATION --&gt;
 
   &lt;section class=&quot;section&quot;&gt;
 
@@ -1143,45 +922,51 @@
       &lt;span class=&quot;rule&quot;&gt;&lt;/span&gt;
     &lt;/div&gt;
 
-    &lt;div class=&quot;contact-box&quot;&gt;
+    &lt;div class=&quot;intro&quot;&gt;
 
-      &lt;div class=&quot;contact-lead&quot;&gt;
+      &lt;div class=&quot;intro-grid&quot;&gt;
 
-        &lt;small&gt;01 / Direct Contact&lt;/small&gt;
+        &lt;div class=&quot;intro-main&quot;&gt;
 
-        &lt;h3&gt;
-          Tell us
-          what you&#39;re
-          creating.
-        &lt;/h3&gt;
+          &lt;p&gt;
+            If you’re interested in being featured on Indiefferential,
+            collaborating with us, sharing your music, product or project,
+            or simply getting in touch, we’d love to hear from you.
+            For feature inquiries, submissions, print issue requests,
+            or anything else, feel free to email us with
+            “Music Submission” as the subject line.
+          &lt;/p&gt;
 
-      &lt;/div&gt;
-
-      &lt;div class=&quot;contact-copy&quot;&gt;
-
-        &lt;p&gt;
-          If you are interested in a feature on Indiefferential, feel free
-          to tell us more about your music, product or project at:
-          &lt;a href=&quot;mailto:indiefferential@gmail.com&quot;&gt;
-            indiefferential@gmail.com
+          &lt;a
+            class=&quot;intro-button&quot;
+            href=&quot;mailto:indiefferential@gmail.com&quot;
+          &gt;
+            &lt;span&gt;Free Submission / Contact Us&lt;/span&gt;
+            &lt;span&gt;↗&lt;/span&gt;
           &lt;/a&gt;
-          or simply send us a
-          &lt;a href=&quot;http://m.me/Indiefferential&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
-            direct message
-          &lt;/a&gt;.
-        &lt;/p&gt;
 
-        &lt;p&gt;
-          You can also submit music to Indiefferential according to your needs.
-        &lt;/p&gt;
+          &lt;p class=&quot;intro-paid&quot;&gt;
+            &lt;strong&gt;Free submissions. Optional paid promotion.&lt;/strong&gt;
+            Music and projects are always welcome for printing and
+            publishing consideration at no cost. Since Indiefferential
+            does not use advertising on the website, we also offer
+            optional paid promo routes for artists and projects that
+            want additional exposure.
+          &lt;/p&gt;
 
-        &lt;a
-          class=&quot;feedback-button&quot;
-          href=&quot;mailto:indiefferential@gmail.com&quot;
-        &gt;
-          &lt;span&gt;Contact Indiefferential&lt;/span&gt;
-          &lt;span&gt;↗&lt;/span&gt;
-        &lt;/a&gt;
+          &lt;p class=&quot;intro-reach&quot;&gt;
+            For the price of one coffee, you can put your project in
+            front of &lt;strong&gt;9K+ mailing list members&lt;/strong&gt; and reach
+            a potential audience of &lt;strong&gt;560M+ across our platforms&lt;/strong&gt;.
+          &lt;/p&gt;
+
+        &lt;/div&gt;
+
+        &lt;div class=&quot;intro-note&quot;&gt;
+          &lt;strong&gt;Submissions&lt;/strong&gt;
+          Choose the route that fits your music, project and the kind
+          of Indiefferential feature you are looking for.
+        &lt;/div&gt;
 
       &lt;/div&gt;
 
@@ -1189,9 +974,14 @@
 
   &lt;/section&gt;
 
-  &lt;!-- PAID PROMO --&gt;
 
-  &lt;section class=&quot;im-paid-promo&quot; id=&quot;paid-promo&quot; aria-labelledby=&quot;paid-promo-title&quot;&gt;
+  &lt;!-- 02 / PAID PROMO --&gt;
+
+  &lt;section
+    class=&quot;im-paid-promo&quot;
+    id=&quot;paid-promo&quot;
+    aria-labelledby=&quot;paid-promo-title&quot;
+  &gt;
 
     &lt;div class=&quot;im-paid-promo__inner&quot;&gt;
 
@@ -1204,14 +994,15 @@
       &lt;div class=&quot;im-paid-promo__intro&quot;&gt;
 
         &lt;p class=&quot;im-paid-promo__lead&quot;&gt;
-          Want to put your release in front of more listeners &amp; readers?
+          Want to put your release in front of more listeners &amp;amp; readers?
           Choose the route that fits your campaign for the price of a coffee.
         &lt;/p&gt;
 
         &lt;p class=&quot;im-paid-promo__note&quot;&gt;
           &lt;strong&gt;Independent routes&lt;/strong&gt;
-           Since we don&#39;t use advertising on our website, we also offer optional paid promo 
-           routes for artists and projects that want additional exposure.
+          Since we don&#39;t use advertising on our website, we also offer
+          optional paid promo routes for artists and projects that want
+          additional exposure.
         &lt;/p&gt;
 
       &lt;/div&gt;
@@ -1220,11 +1011,14 @@
 
         &lt;article class=&quot;im-paid-promo__card&quot;&gt;
           &lt;span class=&quot;im-paid-promo__index&quot;&gt;01 / Print feature&lt;/span&gt;
+
           &lt;h3&gt;Musosoup&lt;/h3&gt;
+
           &lt;p class=&quot;im-paid-promo__offer&quot;&gt;
             Full Page Printed Feature / Double Page Printed Feature /
             Front Page Coverage
           &lt;/p&gt;
+
           &lt;a
             class=&quot;im-paid-promo__button&quot;
             href=&quot;https://app.musosoup.com/submit/IndiefferentialMagazine&quot;
@@ -1236,13 +1030,17 @@
           &lt;/a&gt;
         &lt;/article&gt;
 
+
         &lt;article class=&quot;im-paid-promo__card&quot;&gt;
           &lt;span class=&quot;im-paid-promo__index&quot;&gt;02 / Print feature&lt;/span&gt;
+
           &lt;h3&gt;YOUHEARUS&lt;/h3&gt;
+
           &lt;p class=&quot;im-paid-promo__offer&quot;&gt;
             Full Page Printed Feature for artists who want a physical
             magazine placement.
           &lt;/p&gt;
+
           &lt;a
             class=&quot;im-paid-promo__button&quot;
             href=&quot;https://youhearus.com/?ref=ztra4kldurxb&quot;
@@ -1254,13 +1052,17 @@
           &lt;/a&gt;
         &lt;/article&gt;
 
+
         &lt;article class=&quot;im-paid-promo__card&quot;&gt;
           &lt;span class=&quot;im-paid-promo__index&quot;&gt;03 / Feedback + print&lt;/span&gt;
+
           &lt;h3&gt;Groover&lt;/h3&gt;
+
           &lt;p class=&quot;im-paid-promo__offer&quot;&gt;
             Guaranteed Feedback — 100 Word Article / Cover Art and Title
             in Print Magazine
           &lt;/p&gt;
+
           &lt;a
             class=&quot;im-paid-promo__button&quot;
             href=&quot;https://groover.co/band/signup/referral/influencer/14264/?utm_source=widget&amp;utm_medium=widget_banner&amp;utm_campaign=0.indiefferential&amp;widget_id=14264&quot;
@@ -1272,13 +1074,17 @@
           &lt;/a&gt;
         &lt;/article&gt;
 
+
         &lt;article class=&quot;im-paid-promo__card&quot;&gt;
           &lt;span class=&quot;im-paid-promo__index&quot;&gt;04 / Editorial article&lt;/span&gt;
+
           &lt;h3&gt;OneSubmit&lt;/h3&gt;
+
           &lt;p class=&quot;im-paid-promo__offer&quot;&gt;
             300 Word Article designed to give your release a focused
             editorial introduction.
           &lt;/p&gt;
+
           &lt;a
             class=&quot;im-paid-promo__button&quot;
             href=&quot;https://app.one-submit.com/direct-submit/18194/2030/4645/Indiefferential-blog-Music-Promotion&quot;
@@ -1290,13 +1096,17 @@
           &lt;/a&gt;
         &lt;/article&gt;
 
+
         &lt;article class=&quot;im-paid-promo__card&quot;&gt;
           &lt;span class=&quot;im-paid-promo__index&quot;&gt;05 / Short feature&lt;/span&gt;
+
           &lt;h3&gt;Pillargram&lt;/h3&gt;
+
           &lt;p class=&quot;im-paid-promo__offer&quot;&gt;
             100 Word Article for a concise introduction to your music
             and creative project.
           &lt;/p&gt;
+
           &lt;a
             class=&quot;im-paid-promo__button&quot;
             href=&quot;https://pillargram.com/refer-curator?referCode=Indiefferential-Magazine&quot;
@@ -1316,9 +1126,11 @@
       &lt;/p&gt;
 
     &lt;/div&gt;
+
   &lt;/section&gt;
 
-  &lt;!-- MUSOSOUP --&gt;
+
+  &lt;!-- MUSIC / PRINT --&gt;
 
   &lt;section class=&quot;red-band&quot;&gt;
 
@@ -1333,9 +1145,8 @@
 
   &lt;/section&gt;
 
-  
 
-  &lt;!-- GROOVER --&gt;
+  &lt;!-- 03 / GUARANTEED FEEDBACK --&gt;
 
   &lt;section class=&quot;section&quot;&gt;
 
@@ -1348,8 +1159,8 @@
     &lt;div class=&quot;feedback-layout&quot;&gt;
 
       &lt;p class=&quot;feedback-lead&quot;&gt;
-        Submit.
-        Receive
+        Submit.&lt;br&gt;
+        Receive&lt;br&gt;
         feedback.
       &lt;/p&gt;
 
@@ -1389,7 +1200,8 @@
 
   &lt;/section&gt;
 
-  &lt;!-- SUPPORT --&gt;
+
+  &lt;!-- 04 / SUPPORT --&gt;
 
   &lt;section class=&quot;section support&quot;&gt;
 
@@ -1428,12 +1240,10 @@
               buy us a coffee
             &lt;/a&gt;
           &lt;/strong&gt;
-          (5$) and you can have
-          &lt;strong&gt;
-            a full page every month
-          &lt;/strong&gt;
+          ($5) and you can have
+          &lt;strong&gt;a full page every month&lt;/strong&gt;
           just for your projects on every printed issue of
-          What&#39;s New? (3-4 per month).
+          What&#39;s New? (3–4 per month).
         &lt;/p&gt;
 
         &lt;a
@@ -1452,6 +1262,7 @@
 
   &lt;/section&gt;
 
+
   &lt;!-- FINAL CTA --&gt;
 
   &lt;section class=&quot;cta&quot;&gt;
@@ -1463,8 +1274,8 @@
       &lt;/div&gt;
 
       &lt;h2&gt;
-        Your music.
-        Your project.
+        Your music.&lt;br&gt;
+        Your project.&lt;br&gt;
         Your page.
       &lt;/h2&gt;
 
@@ -1483,6 +1294,7 @@
     &lt;/div&gt;
 
   &lt;/section&gt;
+
 
   &lt;!-- FOOTER --&gt;
 

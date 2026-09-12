@@ -354,8 +354,9 @@ a{color:inherit}
 img{display:block;max-width:100%}
 
 .header{
-  position:relative;
-  z-index:10;
+  position:sticky;
+  top:0;
+  z-index:500;
   border-bottom:1px solid var(--rs-rule);
   background:#fff;
 }

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magazine Library — Indiefferential</title>
+<meta name="description" content="Indiefferential — Independent music, culture and art coverage from artists and scenes worth hearing.">
+<link rel="icon" href="../favicon.ico">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="header" id="js-header">
+  <div class="header__inner">
+    <div class="logo logo--wordmark">
+      <a class="logo__link" href="../index.html">
+        <span class="logo__wordmark">INDIEFFERENTIAL</span>
+        <span class="logo__strap">Music · Culture · Art</span>
+      </a>
+    </div>
+    <nav class="navbar">
+      <button class="navbar__toggle" type="button" aria-label="Menu" aria-haspopup="true" aria-expanded="false">
+        <span class="navbar__toggle-box">
+          <span class="navbar__toggle-bar"></span>
+          <span class="navbar__toggle-bar"></span>
+          <span class="navbar__toggle-bar"></span>
+        </span>
+      </button>
+      <ul class="navbar__menu">
+        <li><a href="../index.html">Home</a></li><li><a href="../magazine/">Magazine</a></li><li><a href="../podcasts/">Podcasts</a></li><li><a href="../about-us/">About</a></li><li><a href="../spotlight/">Spotlight</a></li><li><a href="../contact-us/">Contact</a></li><li><a href="../lumiere/">LUMIÈRE </a></li>
+      </ul>
+    </nav>
+    <div class="buttons">
+      <a href="https://buymeacoffee.com/indiefferential" target="_blank" rel="noopener" class="btn btn--small btn--outline">Subscribe</a>
+    </div>
+  </div>
+  <div class="rs-trending">
+    <div class="wrapper">
+      <span class="rs-trending-label">Trending</span>
+      <a href="../index.html">New music</a><a href="../tags/culture/">Culture</a><a href="../tags/music-reviews/">Reviews</a><a href="../magazine-library/">Past Issues</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <article class="article-page">
+    
+    
+    
+    <div class="article-body article-body--isolated"><iframe class="article-body__frame" title="Article design" height="720" sandbox="allow-scripts allow-forms allow-popups allow-presentation" srcdoc="&lt;!-- ============================================================
+     INDIEFFERENTIAL — ISSUE LIBRARY (embeddable post version)
+     Paste this whole block into an HTML / Code / Embed block in
+     your site builder&#39;s post editor. It pulls issues live from
+     your books.json on GitHub Pages, so it updates automatically
+     whenever you publish a new issue.
+============================================================= --&gt;
+&lt;div class=&quot;idflib&quot;&gt;
+
+  &lt;style&gt;
+    .idflib {
+      --idf-red: #e21b2d;
+      --idf-ink: #0a0a0a;
+      --idf-paper: #ffffff;
+      --idf-soft: #f5f5f3;
+      --idf-line: #d9d9d7;
+      --idf-muted: #77736f;
+      --idf-serif: Georgia, &quot;Times New Roman&quot;, serif;
+      --idf-sans: Arial, Helvetica, sans-serif;
+      --idf-shadow: 7px 7px 0 var(--idf-ink);
+
+      box-sizing: border-box;
+      background: var(--idf-paper);
+      color: var(--idf-ink);
+      font-family: var(--idf-sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .idflib *,
+    .idflib *::before,
+    .idflib *::after {
+      box-sizing: border-box;
+    }
+
+    .idflib ::selection {
+      background: var(--idf-red);
+      color: #fff;
+    }
+
+    .idflib a {
+      color: inherit;
+    }
+
+    .idflib .idf-head {
+      padding: 0 0 26px;
+      margin-bottom: 34px;
+      border-bottom: 1px solid var(--idf-ink);
+    }
+
+    .idflib .idf-kicker {
+      display: block;
+      margin-bottom: 14px;
+      color: var(--idf-red);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .idflib .idf-head h2 {
+      margin: 0 0 10px;
+      font-family: var(--idf-serif);
+      font-size: clamp(34px, 5vw, 58px);
+      font-weight: 900;
+      letter-spacing: -.055em;
+      line-height: .92;
+    }
+
+    .idflib .idf-head h2::after {
+      content: &quot;.&quot;;
+      color: var(--idf-red);
+    }
+
+    .idflib .idf-head p {
+      margin: 0;
+      max-width: 420px;
+      font-family: var(--idf-serif);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--idf-ink);
+    }
+
+    .idflib #idf-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 45px 24px;
+    }
+
+    .idflib .idf-card {
+      display: block;
+      position: relative;
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .25s ease;
+    }
+
+    .idflib .idf-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .idflib .idf-cover {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 8.5 / 11;
+      background: #fff;
+      border: 1px solid var(--idf-ink);
+      overflow: hidden;
+      box-shadow: var(--idf-shadow);
+      transition: box-shadow .25s ease, transform .25s ease;
+    }
+
+    .idflib .idf-card:hover .idf-cover {
+      transform: translate(-3px, -3px);
+      box-shadow: 10px 10px 0 var(--idf-ink);
+    }
+
+    .idflib .idf-cover img,
+    .idflib .idf-cover canvas {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .idflib .idf-spine {
+      position: absolute;
+      z-index: 5;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 8px;
+      background: linear-gradient(90deg, rgba(0, 0, 0, .28), transparent);
+      pointer-events: none;
+    }
+
+    .idflib .idf-meta {
+      padding: 15px 1px 0;
+    }
+
+    .idflib .idf-meta::before {
+      content: &quot;ISSUE&quot;;
+      display: block;
+      margin-bottom: 6px;
+      color: var(--idf-red);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+
+    .idflib .idf-title {
+      font-family: var(--idf-serif);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.05;
+    }
+
+    .idflib .idf-pages {
+      margin-top: 7px;
+      color: var(--idf-red);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .idflib #idf-empty,
+    .idflib #idf-err {
+      display: none;
+      max-width: 900px;
+      margin: 20px 0;
+      padding: 40px 22px;
+      border: 1px solid var(--idf-ink);
+      background: var(--idf-soft);
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .idflib code {
+      padding: 3px 6px;
+      background: rgba(226, 27, 45, .08);
+      color: var(--idf-red);
+      font-family: monospace;
+    }
+
+    @media (max-width: 1050px) {
+      .idflib #idf-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 700px) {
+      .idflib #idf-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 16px; }
+      .idflib .idf-title { font-size: 15px; }
+    }
+
+    @media (max-width: 420px) {
+      .idflib #idf-grid { grid-template-columns: 1fr; }
+      .idflib .idf-cover { max-width: 320px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .idflib .idf-card, .idflib .idf-cover { transition: none; }
+    }
+  &lt;/style&gt;
+
+  &lt;div class=&quot;idf-head&quot;&gt;
+    &lt;span class=&quot;idf-kicker&quot;&gt;Indiefferential / Magazine&lt;/span&gt;
+    &lt;h2&gt;Issue Library&lt;/h2&gt;
+    &lt;p&gt;Pick an issue to open it as a flipbook&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div id=&quot;idf-grid&quot; aria-label=&quot;Magazine issues&quot;&gt;&lt;/div&gt;
+
+  &lt;p id=&quot;idf-empty&quot;&gt;
+    No issues yet — add one to &lt;code&gt;books.json&lt;/code&gt;.
+  &lt;/p&gt;
+
+  &lt;p id=&quot;idf-err&quot;&gt;
+    Could not load the issue list right now. Please refresh the page.
+  &lt;/p&gt;
+
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/legacy/build/pdf.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    (async function () {
+      // Where the library lives — used for flipbook viewer links and
+      // for resolving any relative cover/file paths in books.json.
+      var IDF_BASE = &quot;https://indiefferential.github.io/mag/&quot;;
+
+      // GitHub Pages doesn&#39;t reliably send CORS headers, so we read
+      // books.json straight from the raw file instead — that always
+      // sends Access-Control-Allow-Origin: * and works cross-domain.
+      var IDF_BOOKS_JSON_RAW = &quot;https://raw.githubusercontent.com/indiefferential/mag/main/books.json&quot;;
+
+      if (window.pdfjsLib) {
+        pdfjsLib.GlobalWorkerOptions.workerSrc =
+          &quot;https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/legacy/build/pdf.worker.min.js&quot;;
+      }
+
+      var grid = document.getElementById(&quot;idf-grid&quot;);
+
+      function resolveUrl(path) {
+        if (!path) return path;
+        if (/^https?:\/\//i.test(path)) return path;
+        return IDF_BASE + path.replace(/^\.?\//, &quot;&quot;);
+      }
+
+      async function pdfFirstPageThumb(file, imgEl) {
+        try {
+          var pdf = await pdfjsLib.getDocument(resolveUrl(file)).promise;
+          var page = await pdf.getPage(1);
+          var base = page.getViewport({ scale: 1 });
+          var scale = 400 / base.width;
+          var viewport = page.getViewport({ scale: scale });
+          var canvas = document.createElement(&quot;canvas&quot;);
+          var context = canvas.getContext(&quot;2d&quot;);
+
+          canvas.width = viewport.width;
+          canvas.height = viewport.height;
+
+          await page.render({
+            canvasContext: context,
+            viewport: viewport
+          }).promise;
+
+          imgEl.replaceWith(canvas);
+        } catch (err) {
+          // Leave the paper placeholder visible if rendering fails.
+        }
+      }
+
+      async function loadBooks() {
+        // Try the raw GitHub copy first (reliable CORS), then fall back
+        // to same-origin and the GitHub Pages copy just in case.
+        var candidates = [IDF_BOOKS_JSON_RAW, &quot;books.json&quot;, IDF_BASE + &quot;books.json&quot;];
+
+        for (var i = 0; i &lt; candidates.length; i++) {
+          try {
+            var res = await fetch(candidates[i]);
+            if (res.ok) return await res.json();
+          } catch (err) {
+            // try next candidate
+          }
+        }
+        throw new Error(&quot;could not load books.json&quot;);
+      }
+
+      try {
+        var books = await loadBooks();
+
+        if (!books || !books.length) {
+          document.getElementById(&quot;idf-empty&quot;).style.display = &quot;block&quot;;
+          return;
+        }
+
+        books.forEach(function (book) {
+          var isPdf = book.type === &quot;pdf&quot;;
+
+          var card = document.createElement(&quot;a&quot;);
+          card.className = &quot;idf-card&quot;;
+          card.href = IDF_BASE + &quot;viewer.html?book=&quot; + encodeURIComponent(book.slug);
+          card.target = &quot;_blank&quot;;
+          card.rel = &quot;noopener&quot;;
+
+          var cover = document.createElement(&quot;div&quot;);
+          cover.className = &quot;idf-cover&quot;;
+
+          var image = document.createElement(&quot;img&quot;);
+          image.alt = book.title + &quot; cover&quot;;
+
+          var spine = document.createElement(&quot;span&quot;);
+          spine.className = &quot;idf-spine&quot;;
+          spine.setAttribute(&quot;aria-hidden&quot;, &quot;true&quot;);
+
+          var meta = document.createElement(&quot;div&quot;);
+          meta.className = &quot;idf-meta&quot;;
+
+          var title = document.createElement(&quot;div&quot;);
+          title.className = &quot;idf-title&quot;;
+          title.textContent = book.title;
+
+          var pages = document.createElement(&quot;div&quot;);
+          pages.className = &quot;idf-pages&quot;;
+          pages.textContent = isPdf ? &quot;PDF&quot; : book.totalPages + &quot; pages&quot;;
+
+          cover.append(image, spine);
+          meta.append(title, pages);
+          card.append(cover, meta);
+          grid.appendChild(card);
+
+          if (isPdf &amp;&amp; book.cover) {
+            image.src = resolveUrl(book.cover);
+          } else if (isPdf &amp;&amp; book.file) {
+            pdfFirstPageThumb(book.file, image);
+          } else if (book.cover) {
+            image.src = resolveUrl(book.cover);
+          }
+        });
+      } catch (err) {
+        document.getElementById(&quot;idf-err&quot;).style.display = &quot;block&quot;;
+      }
+    })();
+  &lt;/script&gt;
+
+&lt;/div&gt;&lt;script&gt;
+(function(){
+  function report(){
+    var height = Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement.scrollHeight);
+    parent.postMessage({type:&#39;indiefferential-article-height&#39;,height:height}, &#39;*&#39;);
+  }
+  if(document.readyState === &#39;loading&#39;) document.addEventListener(&#39;DOMContentLoaded&#39;, report);
+  else report();
+  window.addEventListener(&#39;load&#39;, report);
+  if(window.ResizeObserver) new ResizeObserver(report).observe(document.documentElement);
+})();
+&lt;/script&gt;"></iframe></div>
+    
+  </article>
+</main>
+<footer class="footer">
+  <div class="wrapper">
+    <a class="logo footer__logo" href="../index.html">
+      <span class="logo__wordmark">INDIEFFERENTIAL</span>
+      <span class="logo__strap">Music · Culture · Art</span>
+    </a>
+    <div class="footer__copy"><p>© Indiefferential 2026 — Independent music and culture magazine</p></div>
+  </div>
+</footer>
+<div class="cookie-consent" id="cookie-consent" hidden>
+  <p class="cookie-consent__text">We use cookies for essential site functionality. YouTube, Spotify, and Bandcamp players embedded in posts are only loaded after you click them, which may set that service’s own cookies. Newsletter sign-ups are processed by Web3Forms, a third-party form service. <a href="../terms/">Privacy Policy</a></p>
+  <div class="cookie-consent__actions">
+    <button type="button" class="cookie-consent__btn cookie-consent__btn--decline" id="cookie-consent-decline">Necessary Only</button>
+    <button type="button" class="cookie-consent__btn cookie-consent__btn--accept" id="cookie-consent-accept">Accept</button>
+  </div>
+</div>
+<script>
+(function(){
+  document.querySelectorAll('.article-body .post__iframe, .article-body .post__video').forEach(function(box){
+    var el = box.querySelector('iframe, video');
+    if(!el) return;
+    var w = parseFloat(el.getAttribute('width')), h = parseFloat(el.getAttribute('height'));
+    if(w > 0 && h > 0) box.style.setProperty('--embed-aspect-ratio', (h / w * 100) + '%');
+  });
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('iframe[data-embed-src]').forEach(function(iframe){
+    var parent = iframe.parentElement;
+    if(!parent) return;
+    if(window.getComputedStyle(parent).position === 'static') parent.style.position = 'relative';
+    var service = iframe.getAttribute('data-embed-service') || 'this service';
+    var facade = document.createElement('button');
+    facade.type = 'button';
+    facade.className = 'embed-facade';
+    facade.style.position = 'absolute';
+    facade.style.top = '0';
+    facade.style.left = '0';
+    facade.style.width = '100%';
+    facade.style.height = '100%';
+    facade.innerHTML =
+      '<span class="embed-facade__play">▶</span>' +
+      '<span class="embed-facade__label">Click to load ' + service + '</span>' +
+      '<span class="embed-facade__note">Loads content from ' + service + ', which may set its own cookies.</span>';
+    facade.addEventListener('click', function(){
+      iframe.setAttribute('src', iframe.getAttribute('data-embed-src'));
+      facade.remove();
+    }, {once:true});
+    parent.insertBefore(facade, iframe);
+  });
+})();
+</script>
+<script>
+(function(){
+  var KEY = 'idf_consent';
+  var banner = document.getElementById('cookie-consent');
+  if(!banner) return;
+  var stored = null;
+  try{ stored = localStorage.getItem(KEY); }catch(e){}
+  if(!stored) banner.hidden = false;
+  var accept = document.getElementById('cookie-consent-accept');
+  var decline = document.getElementById('cookie-consent-decline');
+  function choose(value){
+    try{ localStorage.setItem(KEY, value); }catch(e){}
+    banner.hidden = true;
+  }
+  if(accept) accept.addEventListener('click', function(){ choose('accepted'); });
+  if(decline) decline.addEventListener('click', function(){ choose('declined'); });
+})();
+</script>
+<script>
+(function(){
+  var form = document.getElementById('newsletter-signup-form');
+  if(!form) return;
+  var note = document.getElementById('newsletter-signup-fineprint');
+  var originalNote = note ? note.textContent : '';
+  var button = form.querySelector('button[type="submit"]');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(button) button.disabled = true;
+    var data = new FormData(form);
+    fetch("https://api.web3forms.com/submit", {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: data
+    }).then(function(res){ return res.json(); }).then(function(json){
+      if(json.success){
+        form.reset();
+        if(note) note.textContent = "Thanks for signing up — check your inbox soon!";
+      } else {
+        if(note) note.textContent = "Something went wrong. Please try again in a moment.";
+      }
+    }).catch(function(){
+      if(note) note.textContent = "Something went wrong. Please try again in a moment.";
+    }).finally(function(){
+      if(button) button.disabled = false;
+      if(note) setTimeout(function(){ note.textContent = originalNote; }, 6000);
+    });
+  });
+})();
+</script>
+<script>
+var menuToggle = document.querySelector('.navbar__toggle');
+var navbar = document.querySelector('.navbar');
+if(menuToggle && navbar){
+  menuToggle.addEventListener('click', function(){
+    var isOpen = navbar.classList.toggle('is-open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+}
+document.querySelectorAll('img[loading]').forEach(function(img){
+  if(img.complete) img.classList.add('is-loaded');
+  else img.addEventListener('load', function(){ this.classList.add('is-loaded'); });
+});
+(function(){
+  window.addEventListener('message', function(event){
+    var data = event.data || {};
+    if(data.type !== 'indiefferential-article-height') return;
+    var frame = document.querySelector('.article-body__frame');
+    if(frame && data.height) frame.style.height = Math.max(720, Number(data.height) + 8) + 'px';
+  });
+})();
+(function(){
+  var carousel = document.querySelector('[data-review-carousel]');
+  if(!carousel) return;
+  var slides = carousel.querySelectorAll('.review-card');
+  var dots = document.querySelectorAll('.reviews-panel__dot');
+  var idx = 0, timer = null;
+  function show(i){
+    idx = (i + slides.length) % slides.length;
+    slides.forEach(function(s, si){ s.classList.toggle('is-active', si === idx); });
+    dots.forEach(function(d, di){ d.classList.toggle('is-active', di === idx); });
+  }
+  function restart(){
+    if(timer) clearInterval(timer);
+    if(slides.length > 1) timer = setInterval(function(){ show(idx + 1); }, 7000);
+  }
+  dots.forEach(function(d, di){
+    d.addEventListener('click', function(){ show(di); restart(); });
+  });
+  restart();
+})();
+</script>
+</body>
+</html>
