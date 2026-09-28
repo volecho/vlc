@@ -8,6 +8,15 @@
 <meta name="description" content="Indiefferential — Independent music, culture and art coverage from artists and scenes worth hearing.">
 <link rel="icon" href="../favicon.ico">
 <link rel="stylesheet" href="../style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZSJ1VXT4BC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZSJ1VXT4BC');
+</script>
 </head>
 <body>
 <header class="header" id="js-header">
@@ -37,7 +46,7 @@
   <div class="rs-trending">
     <div class="wrapper">
       <span class="rs-trending-label">Trending</span>
-      <a href="../tags/news/">News</a><a href="../tags/culture/">Culture</a><a href="../tags/music-reviews/">Reviews</a><a href="../magazine-library/">Past Issues</a>
+      <a href="../tags/news/">News</a><a href="../tags/culture/">Culture</a><a href="../tags/music-reviews/">Reviews</a><a href="../tags/interviews/">Interviews</a><a href="../tags/gaming/">Gaming</a><a href="../magazine-library/">Past Issues</a>
     </div>
   </div>
 </header>
@@ -1887,7 +1896,7 @@
   </div>
 </footer>
 <div class="cookie-consent" id="cookie-consent" hidden>
-  <p class="cookie-consent__text">We use cookies for essential site functionality. YouTube, Spotify, and Bandcamp players embedded in posts are only loaded after you click them, which may set that service’s own cookies. Newsletter sign-ups are processed by Web3Forms, a third-party form service. <a href="../terms/">Privacy Policy</a></p>
+  <p class="cookie-consent__text">We use cookies for essential site functionality. YouTube, Spotify, Soundcloud and Bandcamp players embedded in posts are only loaded after you click them, which may set that service’s own cookies. Newsletter sign-ups are processed by Web3Forms, a third-party form service. <a href="../terms/">Privacy Policy</a></p>
   <div class="cookie-consent__actions">
     <button type="button" class="cookie-consent__btn cookie-consent__btn--decline" id="cookie-consent-decline">Necessary Only</button>
     <button type="button" class="cookie-consent__btn cookie-consent__btn--accept" id="cookie-consent-accept">Accept</button>
@@ -1903,33 +1912,7 @@
   });
 })();
 </script>
-<script>
-(function(){
-  document.querySelectorAll('iframe[data-embed-src]').forEach(function(iframe){
-    var parent = iframe.parentElement;
-    if(!parent) return;
-    if(window.getComputedStyle(parent).position === 'static') parent.style.position = 'relative';
-    var service = iframe.getAttribute('data-embed-service') || 'this service';
-    var facade = document.createElement('button');
-    facade.type = 'button';
-    facade.className = 'embed-facade';
-    facade.style.position = 'absolute';
-    facade.style.top = '0';
-    facade.style.left = '0';
-    facade.style.width = '100%';
-    facade.style.height = '100%';
-    facade.innerHTML =
-      '<span class="embed-facade__play">▶</span>' +
-      '<span class="embed-facade__label">Click to load ' + service + '</span>' +
-      '<span class="embed-facade__note">Loads content from ' + service + ', which may set its own cookies.</span>';
-    facade.addEventListener('click', function(){
-      iframe.setAttribute('src', iframe.getAttribute('data-embed-src'));
-      facade.remove();
-    }, {once:true});
-    parent.insertBefore(facade, iframe);
-  });
-})();
-</script>
+
 <script>
 (function(){
   var KEY = 'idf_consent';

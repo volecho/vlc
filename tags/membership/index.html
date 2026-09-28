@@ -8,6 +8,15 @@
 <meta name="description" content="Indiefferential — Independent music, culture and art coverage from artists and scenes worth hearing.">
 <link rel="icon" href="../../favicon.ico">
 <link rel="stylesheet" href="../../style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZSJ1VXT4BC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZSJ1VXT4BC');
+</script>
 </head>
 <body>
 <header class="header" id="js-header">
@@ -37,7 +46,7 @@
   <div class="rs-trending">
     <div class="wrapper">
       <span class="rs-trending-label">Trending</span>
-      <a href="../../tags/news/">News</a><a href="../../tags/culture/">Culture</a><a href="../../tags/music-reviews/">Reviews</a><a href="../../magazine-library/">Past Issues</a>
+      <a href="../../tags/news/">News</a><a href="../../tags/culture/">Culture</a><a href="../../tags/music-reviews/">Reviews</a><a href="../../tags/interviews/">Interviews</a><a href="../../tags/gaming/">Gaming</a><a href="../../magazine-library/">Past Issues</a>
     </div>
   </div>
 </header>
@@ -68,9 +77,9 @@
           </div>
         </div>
         <div class="mag-panel">
-          <a class="mag-panel__cover" href="magazine/"><img src="https://raw.githubusercontent.com/indiefferential/mag/main/books/wnsep2/pages/page01.jpg" alt="Indiefferential Magazine — current issue cover" loading="lazy"></a>
+          <a class="mag-panel__cover" href="indiefferential-milyam-edition/"><img src="https://raw.githubusercontent.com/indiefferential/mag/main/books/milyam/pages/page01.jpg" alt="Indiefferential Magazine — current issue cover" loading="lazy"></a>
           <div class="mag-panel__actions">
-            <a class="mag-btn mag-btn--solid" href="magazine/">Get the Magazine</a>
+            <a class="mag-btn mag-btn--solid" href="indiefferential-milyam-edition/">Get the Magazine</a>
             <a class="mag-btn mag-btn--solid" href="https://www.instagram.com/indiefferential">Follow Us</a>
             <a class="mag-btn" href="https://open.spotify.com/playlist/6an6lqcIRe7x5IPUULpN7l">Spotify</a>
             <a class="mag-btn" href="mailto:indiefferential@gmail.com?subject=Magazine%20customer%20service">Contact Us</a>
@@ -99,7 +108,7 @@
       </div>
       <div class="sidebar">
   <div class="sidebar__item featured-posts">
-    <h2 class="h6 sidebar__item-title">Featured Stories</h2>
+    <h2 class="h6 sidebar__item-title">Latest Issues</h2>
     
     <ol class="featured-posts__list">
       
@@ -116,6 +125,10 @@
     <h2 class="h6 sidebar__item-title">Authors</h2>
     <ul class="cards authors__list"><li class="authors__item">No authors yet.</li></ul>
   </div>
+  <div class="sidebar__item printed-features">
+    <h2 class="h6 sidebar__item-title">Printed Features</h2>
+    <ul class="cards latest-review__list printed-features__list"><li class="card__item"><h3 class="card__title"><a href="../../e-lissa-faden-turns-quiet-rage-into-hypnotic-darkness-on-cement/" class="invert">e.lissa faden Turns Quiet Rage Into Hypnotic Darkness on "Cement"</a></h3><div class="card__meta"><time datetime="2026-09-28T00:00">September 28, 2026</time></div></li><li class="card__item"><h3 class="card__title"><a href="../../learning-to-shred-learning-to-scream-the-origin-of-limit-state/" class="invert">Learning to Shred, Learning to Scream: The Origin of Limit State</a></h3><div class="card__meta"><time datetime="2026-09-28T00:00">September 28, 2026</time></div></li><li class="card__item"><h3 class="card__title"><a href="../../three-continents-one-bow-william-roblejos-global-cuban-symphony/" class="invert">Three Continents, One Bow: William Roblejo's Global Cuban Symphony</a></h3><div class="card__meta"><time datetime="2026-09-28T00:00">September 28, 2026</time></div></li><li class="card__item"><h3 class="card__title"><a href="../../hope-in-the-ashes-niel-lians-solo-piano-meditation-on-fragility/" class="invert">Hope in the Ashes: Niel Lian's Solo Piano Meditation on Fragility</a></h3><div class="card__meta"><time datetime="2026-09-28T00:00">September 28, 2026</time></div></li><li class="card__item"><h3 class="card__title"><a href="../../from-idol-stage-to-his-own-world-sebastian-rydgrens-glittering-new-chapter/" class="invert">From Idol Stage to His Own World: Sebastian Rydgren's Glittering New Chapter</a></h3><div class="card__meta"><time datetime="2026-09-28T00:00">September 28, 2026</time></div></li></ul>
+  </div>
 </div>
     </div>
   </div>
@@ -130,7 +143,7 @@
   </div>
 </footer>
 <div class="cookie-consent" id="cookie-consent" hidden>
-  <p class="cookie-consent__text">We use cookies for essential site functionality. YouTube, Spotify, and Bandcamp players embedded in posts are only loaded after you click them, which may set that service’s own cookies. Newsletter sign-ups are processed by Web3Forms, a third-party form service. <a href="../../terms/">Privacy Policy</a></p>
+  <p class="cookie-consent__text">We use cookies for essential site functionality. YouTube, Spotify, Soundcloud and Bandcamp players embedded in posts are only loaded after you click them, which may set that service’s own cookies. Newsletter sign-ups are processed by Web3Forms, a third-party form service. <a href="../../terms/">Privacy Policy</a></p>
   <div class="cookie-consent__actions">
     <button type="button" class="cookie-consent__btn cookie-consent__btn--decline" id="cookie-consent-decline">Necessary Only</button>
     <button type="button" class="cookie-consent__btn cookie-consent__btn--accept" id="cookie-consent-accept">Accept</button>
@@ -146,33 +159,7 @@
   });
 })();
 </script>
-<script>
-(function(){
-  document.querySelectorAll('iframe[data-embed-src]').forEach(function(iframe){
-    var parent = iframe.parentElement;
-    if(!parent) return;
-    if(window.getComputedStyle(parent).position === 'static') parent.style.position = 'relative';
-    var service = iframe.getAttribute('data-embed-service') || 'this service';
-    var facade = document.createElement('button');
-    facade.type = 'button';
-    facade.className = 'embed-facade';
-    facade.style.position = 'absolute';
-    facade.style.top = '0';
-    facade.style.left = '0';
-    facade.style.width = '100%';
-    facade.style.height = '100%';
-    facade.innerHTML =
-      '<span class="embed-facade__play">▶</span>' +
-      '<span class="embed-facade__label">Click to load ' + service + '</span>' +
-      '<span class="embed-facade__note">Loads content from ' + service + ', which may set its own cookies.</span>';
-    facade.addEventListener('click', function(){
-      iframe.setAttribute('src', iframe.getAttribute('data-embed-src'));
-      facade.remove();
-    }, {once:true});
-    parent.insertBefore(facade, iframe);
-  });
-})();
-</script>
+
 <script>
 (function(){
   var KEY = 'idf_consent';
